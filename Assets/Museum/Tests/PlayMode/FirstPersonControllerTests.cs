@@ -70,12 +70,19 @@ namespace Museum.Tests
             Assert.Less(Quaternion.Angle(pitch, root.transform.GetChild(0).localRotation), 1e-4f);
         }
 
+        // Wait for a condition instead of a fixed time: the first frames of a cold run can be very slow, and Unity clamps their delta time.
+        static IEnumerator WaitUntil(System.Func<bool> condition, float timeoutSeconds = 5f)
+        {
+            float start = Time.realtimeSinceStartup;
+            while (!condition() && Time.realtimeSinceStartup - start < timeoutSeconds) yield return null;
+        }
+
         [UnityTest] public IEnumerator Frozen_StillAppliesGravity()
         {
             var player = Rig();
             Freeze(player);
             float y = root.transform.position.y;
-            yield return new WaitForSeconds(0.5f);
+            yield return WaitUntil(() => root.transform.position.y < y - 0.1f);
             Assert.Less(root.transform.position.y, y - 0.1f);
         }
 
@@ -85,7 +92,7 @@ namespace Museum.Tests
             Rig();
             float z = root.transform.position.z;
             Press(keyboard.wKey);
-            yield return new WaitForSeconds(0.3f);
+            yield return WaitUntil(() => root.transform.position.z > z + 0.1f);
             Assert.Greater(root.transform.position.z, z + 0.1f);
         }
     }
