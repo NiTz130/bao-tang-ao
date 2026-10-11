@@ -75,7 +75,7 @@ namespace Museum.Tests
             var player = Rig();
             Freeze(player);
             float y = root.transform.position.y;
-            yield return new WaitForSecondsRealtime(0.5f);
+            yield return new WaitForSeconds(0.5f);
             Assert.Less(root.transform.position.y, y - 0.1f);
         }
 
@@ -85,7 +85,7 @@ namespace Museum.Tests
             Rig();
             float z = root.transform.position.z;
             Press(keyboard.wKey);
-            yield return new WaitForSecondsRealtime(0.3f);
+            yield return new WaitForSeconds(0.3f);
             Assert.Greater(root.transform.position.z, z + 0.1f);
         }
     }
