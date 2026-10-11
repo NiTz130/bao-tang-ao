@@ -1,0 +1,61 @@
+# Unity generated folders
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Bb]uild/
+/[Bb]uilds/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+
+# IDE and generated project files
+.vs/
+.vscode/
+.idea/
+*.csproj
+*.sln
+*.suo
+*.user
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.unityproj
+
+# Crash and test outputs
+sysinfo.txt
+crashlytics-build.properties
+results*.xml
+*.apk
+*.aab
+*.unitypackage
+
+# Local tools and work files (not needed to open the project)
+/.cache/
+/.serena/
+/BlenderWork/
+
+# Old exhibit models no longer used by the scene (about 220 MB)
+/Assets/Museum/Models/BayonRelief/
+/Assets/Museum/Models/BayonRelief.meta
+/Assets/Museum/Models/BuddhaHead/
+/Assets/Museum/Models/BuddhaHead.meta
+/Assets/Museum/Models/Devata/
+/Assets/Museum/Models/Devata.meta
+/Assets/Museum/Models/DongSonDrum/
+/Assets/Museum/Models/DongSonDrum.meta
+/Assets/Museum/Models/GuardianLion/
+/Assets/Museum/Models/GuardianLion.meta
+/Assets/Museum/Materials/Exhibits/M_BayonRelief.mat*
+/Assets/Museum/Materials/Exhibits/M_BuddhaHead.mat*
+/Assets/Museum/Materials/Exhibits/M_Devata_*.mat*
+/Assets/Museum/Materials/Exhibits/M_DongSonDrum.mat*
+/Assets/Museum/Materials/Exhibits/M_GuardianLion.mat*
+
+# Check screenshots taken while building the scene
+/Assets/Screenshots/
+/Assets/Screenshots.meta

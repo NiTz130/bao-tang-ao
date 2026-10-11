@@ -1,0 +1,68 @@
+{
+  "intro": {
+    "title": "Di sản đá và đồng",
+    "summary": "Triển lãm giới thiệu di sản đá và đồng của Việt Nam và các nước láng giềng: văn hóa Đông Sơn, Chăm Pa và Khmer. Phần lớn hiện vật là bản quét 3D. Tất cả mô hình được chia sẻ theo giấy phép mở."
+  },
+  "exhibits": [
+    {
+      "slot": "Exhibit_01",
+      "title": "Trống đồng Đông Sơn",
+      "period": "Văn hóa Đông Sơn (khoảng giữa thiên niên kỷ I TCN đến thế kỷ I SCN)",
+      "material": "Đồng",
+      "origin": "Bắc Việt Nam (văn hóa Đông Sơn)",
+      "source": "Trống Đồng Đông Sơn (Dong Son bronze drum) — Aaannnn (Sketchfab), giấy phép CC-BY. Mô hình 3D do tác giả tự dựng (tác giả ghi là tác phẩm cá nhân), không phải bản quét hiện vật thật; kích thước trưng bày là ước lượng.",
+      "summary": "Trống đồng thuộc văn hóa Đông Sơn, nền văn hóa thời đại đồng thau ở miền Bắc Việt Nam. Mặt trống thường có ngôi sao ở giữa và các vành hoa văn đồng tâm.",
+      "story": "Văn hóa Đông Sơn phát triển ở miền Bắc Việt Nam trong thời đại đồng thau, khoảng giữa thiên niên kỷ I trước Công nguyên đến thế kỷ I sau Công nguyên. Người Đông Sơn nổi tiếng với nghề đúc đồng.\n\nTrống đồng là loại hiện vật tiêu biểu nhất của văn hóa này. Mặt trống thường có ngôi sao nhiều cánh ở tâm, quanh đó là các vành hoa văn đồng tâm. Nhiều nhà nghiên cứu cho rằng ngôi sao này gợi hình mặt trời.\n\nTrống thường được dùng trong nghi lễ và sinh hoạt của cộng đồng. Đây là mô hình trống đồng kiểu Đông Sơn. Chúng tôi chưa xác định được đây là chiếc trống cụ thể nào."
+    },
+    {
+      "slot": "Exhibit_02",
+      "title": "Vua Chăm được thần hóa",
+      "period": "Cuối thế kỷ X",
+      "material": "Chưa rõ",
+      "origin": "Chăm Pa (miền Trung Việt Nam)",
+      "source": "Cham Deified King, late 10th C CE — Minneapolis Institute of Art (artsmia) (Sketchfab), giấy phép CC0. Bản quét 3D; kích thước trưng bày là ước lượng.",
+      "summary": "Tượng vua Chăm được thần hóa, niên đại cuối thế kỷ X. Vương quốc Chăm Pa nằm ở miền Trung Việt Nam ngày nay và chịu ảnh hưởng mạnh của Ấn Độ giáo.",
+      "story": "Chăm Pa là một vương quốc cổ ở miền Trung Việt Nam ngày nay. Nghệ thuật Chăm chịu ảnh hưởng mạnh của Ấn Độ giáo, và nhiều đền tháp Chăm thờ các vị thần Ấn Độ giáo.\n\nTrong truyền thống này, nhà vua thường được thần hóa. Người ta tạc vua dưới hình dạng một vị thần, để thể hiện quyền lực của vua gắn với thế giới thần linh. Một tượng như vậy vừa là chân dung nhà vua, vừa là hình ảnh thần.\n\nTiêu đề của hiện vật ghi niên đại là cuối thế kỷ X. Hiện vật này do Bảo tàng Nghệ thuật Minneapolis (Minneapolis Institute of Art) công bố bản quét."
+    },
+    {
+      "slot": "Exhibit_03",
+      "title": "Devata của Angkor",
+      "period": "Thời Angkor (chưa rõ niên đại cụ thể)",
+      "material": "Đá",
+      "origin": "Angkor (Campuchia)",
+      "source": "Devata of Angkor — DarrenWilch (Sketchfab), giấy phép CC-BY. Bản quét 3D; kích thước trưng bày là ước lượng.",
+      "summary": "Devata là các nữ thần được chạm nổi trên tường đền ở Angkor. Tiêu đề hiện vật không ghi niên đại, nên ta chỉ biết nó thuộc bối cảnh Angkor.",
+      "story": "Angkor là vùng kinh đô của người Khmer, nay thuộc Campuchia. Nơi đây có rất nhiều đền đài bằng đá.\n\nDevata là các hình nữ thần được chạm nổi trên tường nhiều đền ở Angkor. Chúng thường đứng một mình hoặc theo nhóm, và thường được chạm trong những khung hình nhỏ trên tường đền.\n\nTiêu đề hiện vật không cho biết niên đại hay tên ngôi đền. Vì vậy chúng tôi không gắn hiện vật này với một ngôi đền hay một thời điểm cụ thể."
+    },
+    {
+      "slot": "Exhibit_04",
+      "title": "Đầu tượng Phật",
+      "period": "Thế kỷ XII–XIII",
+      "material": "Chưa rõ",
+      "origin": "Khmer (Campuchia)",
+      "source": "Head of the Buddha, 12th–13th C CE — Minneapolis Institute of Art (artsmia) (Sketchfab), giấy phép CC0. Bản quét 3D; kích thước trưng bày là ước lượng.",
+      "summary": "Đầu tượng Phật, niên đại thế kỷ XII–XIII. Cuối thế kỷ XII, dưới triều vua Jayavarman VII, Phật giáo phát triển mạnh ở Angkor.",
+      "story": "Hiện vật này có niên đại thế kỷ XII–XIII, theo tiêu đề của bản quét. Đây là thời kỳ đế quốc Khmer xây dựng nhiều đền lớn ở vùng Angkor.\n\nCuối thế kỷ XII, vua Jayavarman VII lên ngôi. Nhà vua theo Phật giáo, và Phật giáo trở nên quan trọng ở Angkor. Nhiều đền và tượng Phật được tạo ra dưới triều vua này.\n\nTượng Phật Khmer thời kỳ này thường có nét mặt trầm lặng, mắt nhìn xuống. Hiện vật này chỉ còn phần đầu. Chúng tôi chưa biết tượng nguyên bản đặt ở đâu."
+    },
+    {
+      "slot": "Exhibit_05",
+      "title": "Sư tử canh giữ",
+      "period": "Cuối thế kỷ XII – đầu thế kỷ XIII",
+      "material": "Đá",
+      "origin": "Khmer (Campuchia)",
+      "source": "Guardian Lion, late 12th–early 13th century — Minneapolis Institute of Art (artsmia) (Sketchfab), giấy phép CC0. Bản quét 3D; kích thước trưng bày là ước lượng.",
+      "summary": "Tượng sư tử canh giữ, niên đại cuối thế kỷ XII đến đầu thế kỷ XIII. Tượng sư tử đá như thế này thường đặt ở cầu thang và thềm của đền Khmer.",
+      "story": "Tiêu đề hiện vật ghi niên đại là cuối thế kỷ XII đến đầu thế kỷ XIII, thuộc thời kỳ nghệ thuật Khmer.\n\nTrong các đền Khmer, tượng sư tử đá thường được đặt ở hai bên cầu thang và trên các thềm đền. Chúng đóng vai trò canh giữ lối vào khu đền.\n\nĐây là tượng sư tử canh giữ, loại tượng thường thấy ở đền Khmer. Chúng tôi chưa biết tượng này đứng ở đền nào."
+    },
+    {
+      "slot": "Exhibit_Centerpiece",
+      "title": "Phù điêu từ đền Bayon",
+      "period": "Cuối thế kỷ XII – đầu thế kỷ XIII",
+      "material": "Đá",
+      "origin": "Đền Bayon, Angkor Thom (Campuchia)",
+      "source": "Relief from the Bayon — Theo.Derory (Sketchfab), giấy phép CC-BY. Bản quét 3D; kích thước trưng bày là ước lượng.",
+      "summary": "Phù điêu từ đền Bayon, ngôi đền quốc gia của vua Jayavarman VII ở trung tâm Angkor Thom. Bayon nổi tiếng với các tháp mặt người và hành lang chạm nổi.",
+      "story": "Bayon là đền quốc gia của vua Jayavarman VII, nằm ở trung tâm Angkor Thom. Đền được xây vào cuối thế kỷ XII và đầu thế kỷ XIII.\n\nBayon nổi tiếng với các tháp có mặt người khổng lồ. Đền còn có những hành lang dài với phù điêu chạm trên tường. Các phù điêu này kể về đời sống thường ngày và các trận đánh, trong đó có cảnh chiến tranh với người Chăm.\n\nĐây là một mảnh phù điêu từ đền Bayon. Chúng tôi không biết mảnh này thể hiện cảnh nào, nên không gán cho nó một câu chuyện cụ thể."
+    }
+  ]
+}

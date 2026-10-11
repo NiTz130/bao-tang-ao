@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d34d9af03bd8a374c810bbfad858edf1, type: 3}
+  m_Name: Info_Exhibit_03
+  m_EditorClassIdentifier: Museum.Runtime::Museum.ExhibitInfo
+  title: "\u1EA4m men ng\u1ECDc c\xF3 n\u1EAFp"
+  period: "Th\u1EDDi L\xFD ho\u1EB7c Tr\u1EA7n, th\u1EBF k\u1EF7 XIII\u2013XIV"
+  material: "G\u1ED1m s\xE0nh, men ng\u1ECDc"
+  origin: "B\u1EAFc Vi\u1EC7t Nam (\u0110\u1EA1i Vi\u1EC7t)"
+  source: "Celadon Ewer and Cover, 13th - 14th C CE \u2014 B\u1EA3o t\xE0ng Ngh\u1EC7
+    thu\u1EADt Minneapolis (Mia) (Sketchfab), gi\u1EA5y ph\xE9p CC0. B\u1EA3n qu\xE9t
+    3D b\u1EB1ng ph\u01B0\u01A1ng ph\xE1p ch\u1EE5p \u1EA3nh (photogrammetry). Hi\u1EC7n
+    v\u1EADt th\u1EADt cao 21 cm; tr\u01B0ng b\xE0y \u0111\xFAng k\xEDch th\u01B0\u1EDBc
+    th\u1EADt."
+  summary: "\u1EA4m g\u1ED1m men ng\u1ECDc c\u1EE7a \u0110\u1EA1i Vi\u1EC7t, th\u1EBF
+    k\u1EF7 XIII\u2013XIV. V\xF2i \u1EA5m \u0111\u01B0\u1EE3c n\u1EB7n theo h\xECnh
+    \u0111\u1EA7u makara, m\u1ED9t lo\xE0i th\u1EE7y qu\xE1i trong th\u1EA7n tho\u1EA1i."
+  story: "Ngh\u1EC1 g\u1ED1m \u1EDF mi\u1EC1n B\u1EAFc Vi\u1EC7t Nam ph\xE1t tri\u1EC3n
+    m\u1EA1nh d\u01B0\u1EDBi th\u1EDDi L\xFD (1009\u20131225) v\xE0 th\u1EDDi Tr\u1EA7n
+    (1225\u20131400). Th\u1EE3 g\u1ED1m Vi\u1EC7t ti\u1EBFp thu ki\u1EC3u d\xE1ng
+    v\xE0 men g\u1ED1m Trung Hoa nh\u01B0ng hay th\u1EED nghi\u1EC7m c\xE1ch l\xE0m
+    ri\xEAng. S\u1EA3n ph\u1EA9m c\u1EE7a h\u1ECD \u0111\u01B0\u1EE3c \u01B0a chu\u1ED9ng
+    trong n\u01B0\u1EDBc v\xE0 \u0111\u01B0\u1EE3c xu\u1EA5t kh\u1EA9u.\n\n\u1EA4m
+    \u0111\u1EF1ng r\u01B0\u1EE3u, n\u01B0\u1EDBc ho\u1EB7c tr\xE0 c\xF3 th\xE2n
+    ph\xECnh v\xE0 v\xF2i ng\u1EAFn r\u1EA5t ph\u1ED5 bi\u1EBFn th\u1EDDi L\xFD \u2013
+    Tr\u1EA7n. V\xF2i c\u1EE7a chi\u1EBFc \u1EA5m n\xE0y \u0111\u01B0\u1EE3c n\u1EB7n
+    theo h\xECnh \u0111\u1EA7u makara, m\u1ED9t lo\xE0i th\u1EE7y qu\xE1i trong th\u1EA7n
+    tho\u1EA1i.\n\nMen ng\u1ECDc l\xE0 l\u1EDBp men trong, m\xE0u xanh l\u1EE5c.
+    M\u1ED9t l\u01B0\u1EE3ng r\u1EA5t nh\u1ECF \xF4-x\xEDt s\u1EAFt trong men t\u1EA1o
+    ra m\xE0u t\u1EEB v\xE0ng nh\u1EA1t \u0111\u1EBFn xanh \xF4 liu. Hoa v\u0103n
+    \u0111\u01B0\u1EE3c kh\u1EAFc ch\xECm tr\xEAn th\xE2n \u1EA5m, n\xEAn men \u0111\u1ECDng
+    d\xE0y h\u01A1n \u1EDF c\xE1c r\xE3nh v\xE0 l\xE0m hoa v\u0103n n\u1ED5i l\xEAn.\n\nHi\u1EC7n
+    v\u1EADt th\u1EADt cao 21 cm, thu\u1ED9c b\u1ED9 s\u01B0u t\u1EADp c\u1EE7a B\u1EA3o
+    t\xE0ng Ngh\u1EC7 thu\u1EADt Minneapolis (Hoa K\u1EF3)."

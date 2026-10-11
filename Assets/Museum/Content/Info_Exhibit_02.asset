@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d34d9af03bd8a374c810bbfad858edf1, type: 3}
+  m_Name: Info_Exhibit_02
+  m_EditorClassIdentifier: Museum.Runtime::Museum.ExhibitInfo
+  title: "Vua Ch\u0103m \u0111\u01B0\u1EE3c th\u1EA7n h\xF3a"
+  period: "Cu\u1ED1i th\u1EBF k\u1EF7 X"
+  material: "Sa th\u1EA1ch"
+  origin: "V\u01B0\u01A1ng qu\u1ED1c Ch\u0103m Pa (mi\u1EC1n Trung Vi\u1EC7t Nam)"
+  source: "Cham Deified King, late 10th C CE \u2014 B\u1EA3o t\xE0ng Ngh\u1EC7 thu\u1EADt
+    Minneapolis (Mia) (Sketchfab), gi\u1EA5y ph\xE9p CC0. B\u1EA3n qu\xE9t 3D b\u1EB1ng
+    ph\u01B0\u01A1ng ph\xE1p ch\u1EE5p \u1EA3nh (photogrammetry). Hi\u1EC7n v\u1EADt
+    th\u1EADt cao 104 cm."
+  summary: "T\u01B0\u1EE3ng sa th\u1EA1ch, c\xF3 l\u1EBD l\xE0 m\u1ED9t v\u1ECB vua
+    Ch\u0103m \u0111\u01B0\u1EE3c th\u1EA7n h\xF3a, cu\u1ED1i th\u1EBF k\u1EF7 X.
+    Nh\xE0 vua ng\u1ED3i trong t\u01B0 th\u1EBF thi\u1EC1n, hai tay c\u1EA7m hoa
+    sen."
+  story: "T\u01B0\u1EE3ng c\xF3 ngu\u1ED3n g\u1ED1c t\u1EEB v\u01B0\u01A1ng qu\u1ED1c
+    Ch\u0103m Pa, \u1EDF mi\u1EC1n Trung Vi\u1EC7t Nam ng\xE0y nay. Phong c\xE1ch
+    c\u1EE7a t\u01B0\u1EE3ng g\u1EA7n v\u1EDBi \u0111i\xEAu kh\u1EAFc \u1EDF c\xE1c
+    khu \u0111\u1EC1n th\xE1p M\u1EF9 S\u01A1n v\xE0 \u0110\u1ED3ng D\u01B0\u01A1ng.\n\nC\xE1c
+    vua Ch\u0103m theo quan ni\u1EC7m vua l\xE0 th\u1EA7n. Ch\xE2n dung c\xE1ch \u0111i\u1EC7u
+    c\u1EE7a nh\xE0 vua \u0111\xF4i khi \u0111\u01B0\u1EE3c \u0111\u1EB7t trong c\xE1c
+    \u0111\u1EC1n th\u1EDD \u1EA4n \u0110\u1ED9 gi\xE1o v\xE0 Ph\u1EADt gi\xE1o do
+    tri\u1EC1u \u0111\xECnh b\u1EA3o tr\u1EE3. T\u01B0\u1EE3ng n\xE0y c\xF3 th\u1EC3
+    t\u1EEBng thu\u1ED9c m\u1ED9t ng\xF4i \u0111\u1EC1n nh\u01B0 v\u1EADy.\n\nNh\xE0
+    vua ng\u1ED3i trong t\u01B0 th\u1EBF thi\u1EC1n, hai tay dang ra c\u1EA7m hoa
+    sen, th\u1EC3 hi\u1EC7n s\u1EF1 thanh khi\u1EBFt. Chu\u1ED7i h\u1EA1t tr\xEAn
+    c\u1ED5 gi\u1ED1ng h\u1EA1t rudraksha, lo\u1EA1i h\u1EA1t g\u1EAFn v\u1EDBi th\u1EA7n
+    Shiva, v\u1ECB th\u1EA7n m\xE0 c\xE1c vua Ch\u0103m t\xF4n th\u1EDD. M\xE1i t\xF3c
+    t\u1EBFt c\u1EA7u k\u1EF3 c\u0169ng g\u1EE3i \u0111\u1EBFn v\u1ECB th\u1EA7n
+    n\xE0y.\n\nHi\u1EC7n v\u1EADt th\u1EADt cao 104 cm, thu\u1ED9c b\u1ED9 s\u01B0u
+    t\u1EADp c\u1EE7a B\u1EA3o t\xE0ng Ngh\u1EC7 thu\u1EADt Minneapolis (Hoa K\u1EF3)."

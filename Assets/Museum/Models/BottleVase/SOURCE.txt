@@ -1,0 +1,10 @@
+Title: Vietnamese Bottle Vase (Yu-hu chun), 15th C CE
+Author: artsmia (Minneapolis Institute of Art)
+Licence: CC0
+URL: https://sketchfab.com/3d-models/49dc9488d3cd465ebc92f6b2d1bc1dc7
+Scan status: Scanned model (photogrammetry tag); display scale = real size per museum (approx. 27 cm)
+Triangles: 64000
+Textures: BottleVase_BaseColor.jpg, BottleVase_Normal.png, BottleVase_MetallicSmoothness.png (all 4096x4096)
+Material: ceramic glaze - metallic 0, smoothness from BottleVase_MetallicSmoothness.png (alpha) in Unity
+BaseColor: source image used directly, no vertex color bake
+AO: none - source occlusion channel was identical to the smoothness map (not real AO), so it was dropped.

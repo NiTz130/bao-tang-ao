@@ -1,0 +1,15 @@
+Title: Statue of Shiva ascetic
+Author: michelon_e
+Licence: CC BY 4.0
+Credit: "Statue of Shiva ascetic" by michelon_e, CC BY 4.0, https://sketchfab.com/3d-models/817f1b8906f144748c1e346bd64251e8
+Scanned model (photogrammetry, tags: photogrammetry, culturalheritage-photogrammetry-3dmodel); display scale approximate (largest dimension 1.0 m)
+Subject: Sandstone Champa statue, Dai Huu village, Binh Dinh, 14th century.
+Faces: source 698012 -> exported 150000 triangles (collapse decimation; normal map baked from the full-resolution mesh).
+Textures:
+  ChamShiva_BaseColor_1.png (8192x8192, sRGB, material slot 1 "Siva3D.1001", 149571 tris) - source baseColor image converted JPEG -> PNG
+  ChamShiva_BaseColor_2.png (8192x8192, sRGB, material slot 2 "Siva3D.1002", 429 tris) - source baseColor image converted JPEG -> PNG
+  ChamShiva_Normal_1.png (4096x4096, tangent space, Non-Color, slot 1) - baked
+  ChamShiva_Normal_2.png (4096x4096, tangent space, Non-Color, slot 2) - baked
+Material: stone - use metallic 0 in Unity
+Vertex colors: none; the base colour is the source image, no colour bake.
+Note: slot 2 UVs were shifted by -1 in U (source used tile u 1.0-1.53) so that they sit in 0-1.

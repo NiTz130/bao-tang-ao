@@ -1,0 +1,35 @@
+// Creates UI/Crosshair (center dot) and UI/ScreenFade (black overlay, last child), idempotent, then saves the scene.
+var ui = GameObject.Find("UI");
+if (ui == null) return "RESULT_FAIL no UI";
+var chT = ui.transform.Find("Crosshair");
+GameObject ch = chT != null ? chT.gameObject : new GameObject("Crosshair", typeof(RectTransform), typeof(CanvasRenderer), typeof(UnityEngine.UI.Image), typeof(UnityEngine.UI.Outline));
+if (chT == null) UnityEditor.Undo.RegisterCreatedObjectUndo(ch, "Crosshair");
+ch.transform.SetParent(ui.transform, false);
+var rt = (RectTransform)ch.transform;
+rt.anchorMin = rt.anchorMax = rt.pivot = new Vector2(0.5f, 0.5f);
+rt.anchoredPosition = Vector2.zero; rt.sizeDelta = new Vector2(6f, 6f);
+var img = ch.GetComponent<UnityEngine.UI.Image>();
+img.sprite = UnityEditor.AssetDatabase.GetBuiltinExtraResource<Sprite>("UI/Skin/Knob.psd");
+img.color = new Color(1f, 1f, 1f, 0.7f); img.raycastTarget = false;
+var ol = ch.GetComponent<UnityEngine.UI.Outline>();
+ol.effectColor = new Color(0f, 0f, 0f, 0.6f); ol.effectDistance = new Vector2(1f, -1f);
+
+var sfT = ui.transform.Find("ScreenFade");
+GameObject sf = sfT != null ? sfT.gameObject : new GameObject("ScreenFade", typeof(RectTransform), typeof(CanvasRenderer), typeof(UnityEngine.UI.Image), typeof(CanvasGroup), typeof(Museum.ScreenFader));
+if (sfT == null) UnityEditor.Undo.RegisterCreatedObjectUndo(sf, "ScreenFade");
+sf.transform.SetParent(ui.transform, false);
+var srt = (RectTransform)sf.transform;
+srt.anchorMin = Vector2.zero; srt.anchorMax = Vector2.one; srt.offsetMin = Vector2.zero; srt.offsetMax = Vector2.zero;
+var simg = sf.GetComponent<UnityEngine.UI.Image>(); simg.color = Color.black; simg.raycastTarget = false;
+// Saved transparent so the editor Game view is not black; ScreenFader sets alpha 1 at runtime.
+var cg = sf.GetComponent<CanvasGroup>(); cg.alpha = 0f; cg.blocksRaycasts = false; cg.interactable = false;
+sf.transform.SetAsLastSibling();
+
+var scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
+UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(scene);
+UnityEditor.SceneManagement.EditorSceneManager.SaveScene(scene);
+var last = ui.transform.GetChild(ui.transform.childCount - 1).name;
+bool ok = img.sprite != null && last == "ScreenFade" && sf.GetComponent<Museum.ScreenFader>() != null;
+var sb = new System.Text.StringBuilder();
+foreach (Transform t in ui.transform) sb.Append(t.name + " ");
+return (ok ? "RESULT_OK" : "RESULT_FAIL") + " sprite=" + (img.sprite ? img.sprite.name : "NULL") + " children=[" + sb + "] dirty=" + scene.isDirty;

@@ -1,0 +1,28 @@
+// Adds a trigger BoxCollider that fits the model on Exhibit_01..05 (idempotent), then saves the scene.
+var sb = new System.Text.StringBuilder(); bool ok = true;
+for (int i = 1; i <= 5; i++) {
+  var go = GameObject.Find("Exhibits/Exhibit_0" + i);
+  if (go == null) { sb.AppendLine("Exhibit_0" + i + " MISSING"); ok = false; continue; }
+  var slot = go.transform;
+  var rends = slot.GetComponentsInChildren<Renderer>();
+  if (rends.Length == 0) { sb.AppendLine(slot.name + " NO RENDERERS"); ok = false; continue; }
+  Vector3 min = Vector3.positiveInfinity, max = Vector3.negativeInfinity;
+  foreach (var r in rends) {
+    var b = r.bounds;
+    for (int c = 0; c < 8; c++) {
+      var p = new Vector3((c & 1) == 0 ? b.min.x : b.max.x, (c & 2) == 0 ? b.min.y : b.max.y, (c & 4) == 0 ? b.min.z : b.max.z);
+      var l = slot.InverseTransformPoint(p);
+      min = Vector3.Min(min, l); max = Vector3.Max(max, l);
+    }
+  }
+  var box = slot.GetComponent<BoxCollider>();
+  if (box == null) box = UnityEditor.Undo.AddComponent<BoxCollider>(slot.gameObject);
+  box.isTrigger = true; box.center = (min + max) / 2f; box.size = max - min;
+  int solid = 0; foreach (var c in slot.GetComponentsInChildren<Collider>(true)) if (!c.isTrigger) solid++;
+  if (solid > 0 || box.size.y < 0.1f) ok = false;
+  sb.AppendLine(slot.name + " size=" + box.size.ToString("F2") + " center=" + box.center.ToString("F2") + " solidColliders=" + solid);
+}
+var scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
+UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(scene);
+UnityEditor.SceneManagement.EditorSceneManager.SaveScene(scene);
+return (ok ? "RESULT_OK" : "RESULT_FAIL") + " dirty=" + scene.isDirty + "\n" + sb;

@@ -1,0 +1,10 @@
+Title: Khai Dinh Sculpture
+Author: eyesCloud3D
+Licence: CC-BY 4.0
+Credit: "Khai Dinh Sculpture" by eyesCloud3D (Sketchfab), CC-BY 4.0
+URL: https://sketchfab.com/3d-models/1ceca51388ee415dac9040e74bdc3a11
+Scan status: smartphone photogrammetry per author description; display scale approximate (not real size)
+Triangles: 126982
+Textures: KhaiDinhStatue_BaseColor.png (4096x4096, sRGB). No normal, AO or metallic/roughness map in source.
+Material: stone - metallic 0, smoothness 0.1 in Unity
+Removed: nothing (no ground or loose parts; stone plinth kept). Mesh rotated to square the plinth to axes and face -Y; scaled x1.0066 overall to 1.0 m height.

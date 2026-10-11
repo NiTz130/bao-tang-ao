@@ -1,0 +1,26 @@
+// Assigns the spotlights of each exhibit to NarrativeAnchor.highlightLights, then saves the scene.
+var sb = new System.Text.StringBuilder(); bool ok = true; int count = 0;
+foreach (var anchor in UnityEngine.Object.FindObjectsByType<Museum.NarrativeAnchor>(FindObjectsSortMode.InstanceID)) {
+  count++;
+  string[] names = anchor.name == "Exhibit_Centerpiece"
+    ? new[] { "Spot_Centerpiece_L", "Spot_Centerpiece_R" }
+    : new[] { "Spot_" + anchor.name };
+  var so = new UnityEditor.SerializedObject(anchor);
+  var prop = so.FindProperty("highlightLights");
+  prop.arraySize = names.Length;
+  for (int j = 0; j < names.Length; j++) {
+    var go = GameObject.Find("Lighting/" + names[j]);
+    var light = go != null ? go.GetComponent<Light>() : null;
+    if (light == null) ok = false;
+    prop.GetArrayElementAtIndex(j).objectReferenceValue = light;
+  }
+  so.ApplyModifiedProperties();
+  sb.Append(anchor.name + " ->");
+  foreach (var l in anchor.HighlightLights) sb.Append(" " + (l != null ? l.name : "NULL"));
+  sb.AppendLine();
+}
+if (count != 6) ok = false;
+var scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
+UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(scene);
+UnityEditor.SceneManagement.EditorSceneManager.SaveScene(scene);
+return (ok ? "RESULT_OK" : "RESULT_FAIL") + " anchors=" + count + " dirty=" + scene.isDirty + "\n" + sb;

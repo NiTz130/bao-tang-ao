@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d34d9af03bd8a374c810bbfad858edf1, type: 3}
+  m_Name: Info_Exhibit_05
+  m_EditorClassIdentifier: Museum.Runtime::Museum.ExhibitInfo
+  title: "T\u01B0\u1EE3ng quan h\u1EA7u \u1EDF l\u0103ng Kh\u1EA3i \u0110\u1ECBnh"
+  period: "\u0110\u1EA7u th\u1EBF k\u1EF7 XX (l\u0103ng x\xE2y 1920\u20131931)"
+  material: "\u0110\xE1"
+  origin: "L\u0103ng Kh\u1EA3i \u0110\u1ECBnh (\u1EE8ng L\u0103ng), Hu\u1EBF"
+  source: "Khai Dinh Sculpture \u2014 eyesCloud3D (Sketchfab), gi\u1EA5y ph\xE9p
+    CC-BY 4.0. B\u1EA3n qu\xE9t 3D b\u1EB1ng ph\u01B0\u01A1ng ph\xE1p ch\u1EE5p \u1EA3nh,
+    d\u1EF1ng t\u1EEB 2 \u0111o\u1EA1n video quay b\u1EB1ng \u0111i\u1EC7n tho\u1EA1i.
+    T\xEAn t\u01B0\u1EE3ng theo t\xE1c gi\u1EA3 \u0111\u1EB7t; k\xEDch th\u01B0\u1EDBc
+    tr\u01B0ng b\xE0y l\xE0 \u01B0\u1EDBc l\u01B0\u1EE3ng."
+  summary: "T\u01B0\u1EE3ng \u0111\xE1 m\u1ED9t v\u1ECB quan \u0111\u1EE9ng ch\u1EA7u,
+    \u0111\u1ED9i m\u0169 c\xE1nh chu\u1ED3n, hai tay ch\u1EAFp tr\u01B0\u1EDBc b\u1EE5ng.
+    Theo t\xEAn t\xE1c gi\u1EA3 b\u1EA3n qu\xE9t \u0111\u1EB7t, t\u01B0\u1EE3ng thu\u1ED9c
+    l\u0103ng vua Kh\u1EA3i \u0110\u1ECBnh \u1EDF Hu\u1EBF."
+  story: "L\u0103ng Kh\u1EA3i \u0110\u1ECBnh l\xE0 l\u0103ng c\u1EE7a vua Kh\u1EA3i
+    \u0110\u1ECBnh, v\u1ECB vua th\u1EE9 12 c\u1EE7a tri\u1EC1u Nguy\u1EC5n. L\u0103ng
+    \u0111\u01B0\u1EE3c x\xE2y t\u1EEB n\u0103m 1920 \u0111\u1EBFn n\u0103m 1931
+    tr\xEAn s\u01B0\u1EDDn n\xFAi Ch\xE2u Ch\u1EEF, ph\xEDa nam kinh th\xE0nh Hu\u1EBF.
+    Ki\u1EBFn tr\xFAc l\u0103ng k\u1EBFt h\u1EE3p l\u1ED1i truy\u1EC1n th\u1ED1ng
+    Vi\u1EC7t Nam v\u1EDBi v\u1EADt li\u1EC7u v\xE0 chi ti\u1EBFt ph\u01B0\u01A1ng
+    T\xE2y nh\u01B0 b\xEA t\xF4ng v\xE0 trang tr\xED kh\u1EA3m s\xE0nh s\u1EE9.\n\n\u1EDE
+    s\xE2n ch\u1EA7u c\u1EE7a l\u0103ng c\xF3 hai h\xE0ng t\u01B0\u1EE3ng \u0111\xE1
+    \u0111\u1EE9ng \u0111\u1ED1i di\u1EC7n nhau: quan v\u0103n, quan v\xF5, l\xEDnh
+    h\u1EA7u, voi v\xE0 ng\u1EF1a. C\xE1c t\u01B0\u1EE3ng n\xE0y t\u01B0\u1EE3ng
+    tr\u01B0ng cho \u0111o\xE0n t\xF9y t\xF9ng ch\u1EA7u nh\xE0 vua \u1EDF th\u1EBF
+    gi\u1EDBi b\xEAn kia.\n\nPho t\u01B0\u1EE3ng \u1EDF \u0111\xE2y \u0111\u1ED9i
+    m\u0169 c\xE1nh chu\u1ED3n, \u0111\u1EC3 r\xE2u, m\u1EB7c \xE1o r\u1ED9ng c\xF3
+    hoa v\u0103n, hai tay ch\u1EAFp tr\u01B0\u1EDBc b\u1EE5ng v\xE0 c\u1EA7m m\u1ED9t
+    v\u1EADt d\xE0i d\u1EF1ng \u0111\u1EE9ng. T\u01B0\u1EE3ng \u0111\u1EE9ng tr\xEAn
+    m\u1ED9t \u0111\u1EBF \u0111\xE1 hai b\u1EADc.\n\nB\u1EA3n qu\xE9t \u0111\u01B0\u1EE3c
+    t\xE1c gi\u1EA3 d\u1EF1ng ch\u1EC9 t\u1EEB hai \u0111o\u1EA1n video quay b\u1EB1ng
+    \u0111i\u1EC7n tho\u1EA1i, n\xEAn chi ti\u1EBFt b\u1EC1 m\u1EB7t kh\xF4ng s\u1EAFc
+    n\xE9t b\u1EB1ng c\xE1c b\u1EA3n qu\xE9t c\u1EE7a b\u1EA3o t\xE0ng."

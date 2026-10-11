@@ -1,0 +1,5 @@
+Textures from Poly Haven (https://polyhaven.com). Licence: CC0 (public domain).
+
+floor_tiles_06 - Floor Tiles 06 - https://polyhaven.com/a/floor_tiles_06 - Author: Rob Tuytel (all) - CC0
+beige_wall_001 - Beige Wall 001 - https://polyhaven.com/a/beige_wall_001 - Authors: Dimitrios Savva (photography), Rico Cilliers (processing) - CC0
+white_stucco - White Stucco - https://polyhaven.com/a/white_stucco - Author: Amal Kumar (all) - CC0

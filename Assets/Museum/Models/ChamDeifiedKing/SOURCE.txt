@@ -1,0 +1,12 @@
+Title: Cham Deified King, late 10th C CE
+Author: artsmia (Minneapolis Institute of Art)
+Licence: CC0
+URL: https://sketchfab.com/3d-models/13bccb9ba9b6471891f01c78145906f5
+Scanned model; display scale approximate (largest dimension 1.0 m)
+Triangles: 63369
+Textures:
+ChamDeifiedKing_BaseColor.png
+ChamDeifiedKing_Normal.png
+ChamDeifiedKing_AO.png
+Material: stone - use metallic 0 in Unity (no MetallicSmoothness texture).
+Smoothness: constant 0 (source roughness map is constant 1.0).

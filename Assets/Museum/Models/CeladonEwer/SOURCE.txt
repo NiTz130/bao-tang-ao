@@ -1,0 +1,10 @@
+Title: Celadon Ewer and Cover, 13th-14th C CE
+Author: artsmia (Minneapolis Institute of Art)
+Licence: CC0
+URL: https://sketchfab.com/3d-models/048c4728d8fd4f9b9bc97cfbaea48810
+Scanned model (photogrammetry tag); display scale = real size per museum (approx. 21 cm)
+Triangles: 53310 (no decimation)
+Slots: 1 = ewer_lid (cover), 2 = ewer_jar (body)
+Textures: CeladonEwer_BaseColor_1.png, CeladonEwer_BaseColor_2.png, CeladonEwer_MetallicSmoothness_1.png, CeladonEwer_MetallicSmoothness_2.png (all 4096x4096; R=0 metallic, A=smoothness; no normal, no AO in source)
+Material: ceramic glaze - metallic 0, smoothness from texture alpha (mean 0.52 lid, 0.58 jar) in Unity
+BaseColor: source image written directly, no vertex color baked (model has no vertex color)

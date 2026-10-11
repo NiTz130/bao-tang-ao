@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d34d9af03bd8a374c810bbfad858edf1, type: 3}
+  m_Name: Info_Exhibit_Centerpiece
+  m_EditorClassIdentifier: Museum.Runtime::Museum.ExhibitInfo
+  title: "Nh\xE0 bia l\u0103ng T\u1EF1 \u0110\u1EE9c"
+  period: "1864\u20131867 (th\u1EDDi Nguy\u1EC5n)"
+  material: "G\u1EA1ch, v\u1EEFa v\xE0 \u0111\xE1"
+  origin: "L\u0103ng T\u1EF1 \u0110\u1EE9c (Khi\xEAm L\u0103ng), Hu\u1EBF"
+  source: "Tu Duc's Tomb - Stele Building (CyArk Dataset) \u2014 Vasilis Haroupas
+    (vashar) (Sketchfab), gi\u1EA5y ph\xE9p CC-BY 4.0. D\u1EEF li\u1EC7u do CyArk
+    thu th\u1EADp n\u0103m 2019 b\u1EB1ng qu\xE9t laser (LiDAR) v\xE0 ch\u1EE5p \u1EA3nh
+    m\u1EB7t \u0111\u1EA5t, tr\xEAn kh\xF4ng; ph\xE2n ph\u1ED1i qua Open Heritage
+    3D (doi:10.26301/n06n-qa49). Tr\u01B0ng b\xE0y d\u1EA1ng m\xF4 h\xECnh thu nh\u1ECF,
+    kh\xF4ng ph\u1EA3i k\xEDch th\u01B0\u1EDBc th\u1EADt."
+  summary: "Nh\xE0 bia trong l\u0103ng vua T\u1EF1 \u0110\u1EE9c \u1EDF Hu\u1EBF,
+    x\xE2y trong c\xE1c n\u0103m 1864\u20131867. B\xEAn trong \u0111\u1EB7t t\u1EA5m
+    bia \u0111\xE1 kh\u1EAFc b\xE0i Khi\xEAm Cung K\xFD do ch\xEDnh nh\xE0 vua so\u1EA1n."
+  story: "L\u0103ng T\u1EF1 \u0110\u1EE9c, t\xEAn ch\xEDnh th\u1EE9c l\xE0 Khi\xEAm
+    L\u0103ng, l\xE0 l\u0103ng c\u1EE7a vua T\u1EF1 \u0110\u1EE9c, v\u1ECB vua th\u1EE9
+    t\u01B0 c\u1EE7a tri\u1EC1u Nguy\u1EC5n. L\u0103ng \u0111\u01B0\u1EE3c x\xE2y
+    trong ba n\u0103m, t\u1EEB 1864 \u0111\u1EBFn 1867. L\u0103ng chia th\xE0nh hai
+    khu: khu t\u1EA9m \u0111i\u1EC7n \u0111\u1EC3 th\u1EDD c\xFAng v\xE0 khu l\u0103ng
+    m\u1ED9.\n\nTheo l\u1EC7, bia \u1EDF l\u0103ng vua ghi c\xF4ng \u0111\u1EE9c
+    c\u1EE7a nh\xE0 vua v\xE0 do vua k\u1EBF v\u1ECB so\u1EA1n. Vua T\u1EF1 \u0110\u1EE9c
+    kh\xF4ng c\xF3 con trai, n\xEAn \xF4ng t\u1EF1 so\u1EA1n b\xE0i v\u0103n bia
+    Khi\xEAm Cung K\xFD. Trong b\xE0i v\u0103n, nh\xE0 vua k\u1EC3 v\u1EC1 cu\u1ED9c
+    \u0111\u1EDDi m\xECnh v\xE0 t\u1EF1 nh\u1EADn nh\u1EEFng l\u1ED7i l\u1EA7m khi
+    tr\u1ECB v\xEC. T\u1EA5m bia l\u1EDBn \u0111\u1EB7t trong nh\xE0 bia n\xE0y.\n\nC\xF4ng
+    tr\xECnh \u0111\u01B0\u1EE3c t\u1ED5 ch\u1EE9c CyArk qu\xE9t 3D n\u0103m 2019,
+    b\u1EB1ng m\xE1y qu\xE9t laser v\xE0 \u1EA3nh ch\u1EE5p t\u1EEB m\u1EB7t \u0111\u1EA5t
+    v\xE0 tr\xEAn kh\xF4ng. Qu\u1EA7n th\u1EC3 di t\xEDch C\u1ED1 \u0111\xF4 Hu\u1EBF,
+    trong \u0111\xF3 c\xF3 l\u0103ng T\u1EF1 \u0110\u1EE9c, l\xE0 Di s\u1EA3n V\u0103n
+    h\xF3a Th\u1EBF gi\u1EDBi c\u1EE7a UNESCO.\n\nM\xF4 h\xECnh \u1EDF \u0111\xE2y
+    \u0111\u01B0\u1EE3c thu nh\u1ECF \u0111\u1EC3 \u0111\u1EB7t v\u1EEBa trong ph\xF2ng
+    tr\u01B0ng b\xE0y."

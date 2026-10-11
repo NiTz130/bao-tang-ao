@@ -1,0 +1,21 @@
+// Adds ExhibitTargeting to Main Camera, wires it, sets the panel fade to 0.2 s, then saves the scene.
+var cam = Camera.main;
+var chT = GameObject.Find("UI/Crosshair");
+var panel = UnityEngine.Object.FindFirstObjectByType<Museum.ExhibitInfoPanel>(FindObjectsInactive.Include);
+if (cam == null || chT == null || panel == null) return "RESULT_FAIL cam=" + cam + " crosshair=" + chT + " panel=" + panel;
+var t = cam.GetComponent<Museum.ExhibitTargeting>();
+if (t == null) t = UnityEditor.Undo.AddComponent<Museum.ExhibitTargeting>(cam.gameObject);
+var so = new UnityEditor.SerializedObject(t);
+so.FindProperty("cam").objectReferenceValue = cam;
+so.FindProperty("crosshair").objectReferenceValue = chT.GetComponent<UnityEngine.UI.Image>();
+so.ApplyModifiedProperties();
+var ps = new UnityEditor.SerializedObject(panel);
+ps.FindProperty("fadeSeconds").floatValue = 0.2f;
+ps.ApplyModifiedProperties();
+var scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
+UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(scene);
+UnityEditor.SceneManagement.EditorSceneManager.SaveScene(scene);
+int n = UnityEngine.Object.FindObjectsByType<Museum.ExhibitTargeting>(FindObjectsSortMode.None).Length;
+so.Update(); ps.Update();
+bool ok = n == 1 && so.FindProperty("cam").objectReferenceValue != null && so.FindProperty("crosshair").objectReferenceValue != null && ps.FindProperty("fadeSeconds").floatValue > 0f;
+return (ok ? "RESULT_OK" : "RESULT_FAIL") + " targetingCount=" + n + " on=" + cam.name + " fade=" + ps.FindProperty("fadeSeconds").floatValue + " dirty=" + scene.isDirty;

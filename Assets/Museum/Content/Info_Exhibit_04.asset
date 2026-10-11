@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d34d9af03bd8a374c810bbfad858edf1, type: 3}
+  m_Name: Info_Exhibit_04
+  m_EditorClassIdentifier: Museum.Runtime::Museum.ExhibitInfo
+  title: "B\xECnh hoa lam d\xE1ng qu\u1EA3 l\xEA"
+  period: "Cu\u1ED1i th\u1EBF k\u1EF7 XV (th\u1EDDi L\xEA s\u01A1)"
+  material: "G\u1ED1m s\xE0nh ph\u1EE7 \xE1o, v\u1EBD lam d\u01B0\u1EDBi men"
+  origin: "Vi\u1EC7t Nam (\u0110\u1EA1i Vi\u1EC7t)"
+  source: "Vietnamese Bottle Vase (Yu-hu chun), 15th C CE \u2014 B\u1EA3o t\xE0ng
+    Ngh\u1EC7 thu\u1EADt Minneapolis (Mia) (Sketchfab), gi\u1EA5y ph\xE9p CC0. B\u1EA3n
+    qu\xE9t 3D b\u1EB1ng ph\u01B0\u01A1ng ph\xE1p ch\u1EE5p \u1EA3nh (photogrammetry).
+    Hi\u1EC7n v\u1EADt th\u1EADt cao 27 cm; tr\u01B0ng b\xE0y \u0111\xFAng k\xEDch
+    th\u01B0\u1EDBc th\u1EADt."
+  summary: "B\xECnh g\u1ED1m hoa lam cu\u1ED1i th\u1EBF k\u1EF7 XV, d\xE1ng qu\u1EA3
+    l\xEA. Hoa v\u0103n v\u1EBD b\u1EB1ng m\xE0u lam c\xF4-ban d\u01B0\u1EDBi l\u1EDBp
+    men."
+  story: "G\u1ED1m hoa lam Vi\u1EC7t Nam l\u1EA5y c\u1EA3m h\u1EE9ng t\u1EEB g\u1ED1m
+    Trung Hoa. Tuy v\u1EADy, th\u1EE3 g\u1ED1m Vi\u1EC7t kh\xF4ng ch\u1EC9 sao ch\xE9p.
+    H\u1ECD s\xE1ng t\u1EA1o nhi\u1EC1u \u0111\u1EC1 t\xE0i trang tr\xED ri\xEAng:
+    hoa m\u1EABu \u0111\u01A1n, hoa sen, chim, c\xE1, th\xFA v\u1EADt v\xE0 c\u1EA3
+    phong c\u1EA3nh.\n\nChi\u1EBFc b\xECnh n\xE0y c\xF3 d\xE1ng qu\u1EA3 l\xEA thanh
+    m\u1EA3nh, g\u1EA7n v\u1EDBi c\xE1c m\u1EABu b\xECnh Trung Hoa c\u1EA3 v\u1EC1
+    d\xE1ng l\u1EABn hoa v\u0103n. C\xE1c \xF4 hoa v\u0103n \u0111\u01B0\u1EE3c v\u1EBD
+    m\xE0u lam d\u01B0\u1EDBi men, tr\xEAn n\u1EC1n s\xF3ng n\u01B0\u1EDBc. C\u1ED5
+    b\xECnh c\xF3 h\xECnh m\xE2y cu\u1ED9n. D\u01B0\u1EDBi mi\u1EC7ng b\xECnh l\xE0
+    h\xECnh l\xE1 chu\u1ED1i, c\xF2n quanh ch\xE2n b\xECnh l\xE0 m\u1ED9t v\xF2ng
+    c\xE1nh sen.\n\nHi\u1EC7n v\u1EADt th\u1EADt cao 27 cm, thu\u1ED9c b\u1ED9 s\u01B0u
+    t\u1EADp c\u1EE7a B\u1EA3o t\xE0ng Ngh\u1EC7 thu\u1EADt Minneapolis (Hoa K\u1EF3)."

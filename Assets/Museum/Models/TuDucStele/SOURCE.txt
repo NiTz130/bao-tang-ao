@@ -1,0 +1,19 @@
+Title: Tu Duc's Tomb - Stele Building (CyArk Dataset)
+Author: vashar (Vasilis Haroupas) on Sketchfab; data collected by CyArk, distributed by Open Heritage 3D
+Licence: CC BY 4.0
+Credit: "Tu Duc's Tomb - Stele Building (CyArk Dataset)" by vashar, CC BY 4.0, https://sketchfab.com/3d-models/tu-ducs-tomb-stele-building-cyark-dataset-b5d78ecd5e62483192d7ccd193bc063b
+Data: CyArk 2019, Complex of Hue Monuments - Tomb of Tu Duc. LiDAR (terrestrial) + photogrammetry (terrestrial and aerial). https://doi.org/10.26301/n06n-qa49
+Scanned model; display scale reduced (scale model, 3.40 x 3.35 x 2.20 m), not real size.
+Subject: Stele pavilion of Khiem Lang (Tu Duc tomb), Hue, built 1864-1867.
+Faces: source 1918731 -> exported 300000 triangles (collapse decimation; normal map baked from the full-resolution mesh).
+Textures:
+  TuDucStele_BaseColor_1.jpg (8192x8192, sRGB, slot 1 "Cyark_TuDuc", 74468 tris) - source baseColor JPEG, unchanged
+  TuDucStele_Normal_1.png (4096x4096, tangent space, Non-Color, slot 1) - baked
+  TuDucStele_BaseColor_2.jpg (8192x8192, sRGB, slot 2 "Cyark_TuDuc1", 75707 tris) - source baseColor JPEG, unchanged
+  TuDucStele_Normal_2.png (4096x4096, tangent space, Non-Color, slot 2) - baked
+  TuDucStele_BaseColor_3.jpg (8192x8192, sRGB, slot 3 "Cyark_TuDuc2", 69488 tris) - source baseColor JPEG, unchanged
+  TuDucStele_Normal_3.png (4096x4096, tangent space, Non-Color, slot 3) - baked
+  TuDucStele_BaseColor_4.jpg (8192x8192, sRGB, slot 4 "Cyark_TuDuc3", 80337 tris) - source baseColor JPEG, unchanged
+  TuDucStele_Normal_4.png (4096x4096, tangent space, Non-Color, slot 4) - baked
+Material: stone/brick/tile - use metallic 0 in Unity. Source material was shadeless (emission); rebuilt as a URP Lit material in Unity.
+Vertex colors: none.
