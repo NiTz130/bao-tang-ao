@@ -279,6 +279,140 @@ namespace Museum.Tests
             Assert.IsFalse(crosshair.enabled);
         }
 
+        // --- Laser: key 1 gives a 20 m reach, a red line from the "hand" and a dot at the end point. ---
+
+        static readonly Vector3 Hand = new Vector3(0.15f, -0.2f, 0.1f);
+
+        // Built like the scene: the line starts disabled, the dot is a sphere without collider and starts inactive.
+        (LineRenderer line, Transform dot) AddLaser(ExhibitTargeting t, bool on = true)
+        {
+            var line = Track(new GameObject("Line")).AddComponent<LineRenderer>();
+            line.positionCount = 2;
+            line.useWorldSpace = true;
+            line.enabled = false;
+            var dot = Track(GameObject.CreatePrimitive(PrimitiveType.Sphere));
+            Object.DestroyImmediate(dot.GetComponent<SphereCollider>());
+            dot.SetActive(false);
+            Set(t, "laserLine", line);
+            Set(t, "laserDot", dot.transform);
+            if (on) Set(t, "laserOn", true);
+            return (line, dot.transform);
+        }
+
+        [UnityTest]
+        public IEnumerator Laser_ExtendsReach_OffKeepsShortReach()
+        {
+            var (_, _, t) = Rig();
+            var exhibit = MakeExhibit(new Vector3(0, 0, 10), null);
+            Set(t, "laserOn", true);
+            yield return null;
+            Assert.AreSame(exhibit, t.Current);
+
+            Set(t, "laserOn", false);
+            yield return null;
+            Assert.IsNull(t.Current);
+        }
+
+        [UnityTest]
+        public IEnumerator Laser_WallBlocks_DotAtWallHit_LineFromHand()
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            var (cam, _, t) = Rig();
+            var (line, dot) = AddLaser(t);
+            MakeExhibit(new Vector3(0, 0, 10), null);
+            var wall = Track(new GameObject("Wall"));
+            wall.transform.position = new Vector3(0, 0, 5f);
+            wall.AddComponent<BoxCollider>().size = new Vector3(4, 4, 0.2f);
+            Physics.SyncTransforms();
+            yield return null;
+
+            Assert.IsNull(t.Current);
+            Assert.AreEqual(4.9f, dot.position.z, 1e-3f);
+            Assert.AreEqual(0f, dot.position.x, 1e-3f);
+            Assert.Less(Vector3.Distance(line.GetPosition(0), cam.transform.TransformPoint(Hand)), 1e-4f);
+            Assert.Less(Vector3.Distance(line.GetPosition(1), dot.position), 1e-4f);
+        }
+
+        [UnityTest]
+        public IEnumerator Laser_NothingHit_DotAtLaserDistance()
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            var (cam, _, t) = Rig();
+            var (line, dot) = AddLaser(t);
+            cam.transform.position = new Vector3(1, 2, 3);
+            cam.transform.rotation = Quaternion.Euler(0, 90, 0);
+            yield return null;
+
+            var expected = cam.transform.position + cam.transform.forward * 20f;
+            Assert.Less(Vector3.Distance(dot.position, expected), 1e-3f);
+            Assert.Less(Vector3.Distance(line.GetPosition(1), expected), 1e-3f);
+        }
+
+        [UnityTest]
+        public IEnumerator Laser_DotHasNoCollider_TargetDoesNotFlicker()
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            var (_, _, t) = Rig();
+            var (_, dot) = AddLaser(t);
+            var exhibit = MakeExhibit(new Vector3(0, 0, 10), null);
+            for (int i = 0; i < 3; i++)
+            {
+                yield return null;
+                Assert.AreSame(exhibit, t.Current, "frame " + i);
+            }
+            Assert.IsNull(dot.GetComponent<Collider>());
+            Assert.IsTrue(dot.gameObject.activeSelf);
+        }
+
+        [UnityTest]
+        public IEnumerator Laser_Hidden_WhenOff_WhenCursorUnlocked_OnDisable_VisibleAgainAfterEnable()
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            var (_, _, t) = Rig();
+            var (line, dot) = AddLaser(t, on: false);
+            yield return null;
+            Assert.IsFalse(line.enabled, "off");
+            Assert.IsFalse(dot.gameObject.activeSelf, "off");
+
+            Set(t, "laserOn", true);
+            yield return null;
+            Assert.IsTrue(line.enabled, "on");
+            Assert.IsTrue(dot.gameObject.activeSelf, "on");
+
+            Cursor.lockState = CursorLockMode.None;
+            yield return null;
+            Assert.IsFalse(line.enabled, "unlocked");
+            Assert.IsFalse(dot.gameObject.activeSelf, "unlocked");
+
+            Cursor.lockState = CursorLockMode.Locked;
+            yield return null;
+            t.enabled = false;
+            Assert.IsFalse(line.enabled, "disabled");
+            Assert.IsFalse(dot.gameObject.activeSelf, "disabled");
+            Assert.IsTrue(t.LaserOn, "laserOn survives disable");
+
+            t.enabled = true;
+            yield return null;
+            Assert.IsTrue(line.enabled, "re-enabled");
+            Assert.IsTrue(dot.gameObject.activeSelf, "re-enabled");
+        }
+
+        [UnityTest]
+        public IEnumerator Laser_WithoutLineAndDot_WorksWithoutErrors()
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            var (_, _, t) = Rig();
+            var exhibit = MakeExhibit(new Vector3(0, 0, 10), null);
+            Set(t, "laserOn", true);
+            yield return null;
+            yield return null;
+            Assert.AreSame(exhibit, t.Current);
+            t.enabled = false;
+            t.enabled = true;
+            yield return null;
+            LogAssert.NoUnexpectedReceived();
+        }
+
         [UnityTest]
         public IEnumerator MissingWiring_LogsErrorAndDisables()
         {

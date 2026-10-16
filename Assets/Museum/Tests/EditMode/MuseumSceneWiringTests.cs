@@ -79,6 +79,19 @@ namespace Museum.Tests
         }
 
         [Test]
+        public void Targeting_LaserIsWired()
+        {
+            var t = All<ExhibitTargeting>().Single();
+            var line = Ref(t, "laserLine") as LineRenderer;
+            var dot = Ref(t, "laserDot") as Transform;
+            Assert.IsNotNull(line, "laserLine");
+            Assert.IsNotNull(dot, "laserDot");
+            Assert.IsNull(dot.GetComponent<Collider>(), "the dot must not be hit by the targeting ray");
+            Assert.AreEqual("M_Laser", line.sharedMaterial.name);
+            Assert.AreEqual("Universal Render Pipeline/Unlit", line.sharedMaterial.shader.name);
+        }
+
+        [Test]
         public void Panel_FadesIn()
         {
             var panel = All<ExhibitInfoPanel>().Single();

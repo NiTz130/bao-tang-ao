@@ -289,6 +289,40 @@ namespace Museum.Tests
             Assert.AreEqual("Chuyện A\n\nNguồn: Nguồn A", body.text);
             Assert.AreEqual("Nhấn E để thu gọn", hint.text);
         }
+
+        [UnityTest]
+        public IEnumerator Digit1_TogglesLaser()
+        {
+            yield return RigInspect(new Vector3(0f, 0f, 1f));
+            Assert.IsFalse(targeting.LaserOn);
+            yield return Tap(kb.digit1Key);
+            Assert.IsTrue(targeting.LaserOn);
+            yield return Tap(kb.digit1Key);
+            Assert.IsFalse(targeting.LaserOn);
+        }
+
+        [UnityTest]
+        public IEnumerator Laser_InspectFarExhibit_KeepsLaserOnAfterExit()
+        {
+            // Camera and player 10 m from A (outside every anchor zone, radius 3): only the laser reaches it.
+            yield return RigInspect(new Vector3(0f, 0f, -7f));
+            cam.transform.position = new Vector3(0f, 0f, -7f);
+            Physics.SyncTransforms();
+            yield return null;
+            Assert.IsNull(targeting.Current, "beyond 4 m without the laser");
+
+            yield return Tap(kb.digit1Key);
+            Assert.AreSame(anchorA, targeting.Current, "laser reaches A");
+            yield return Tap(kb.eKey);
+            Assert.IsTrue(inspector.IsActive);
+            Assert.AreSame(anchorA, inspector.Anchor);
+
+            yield return new WaitForSecondsRealtime(0.2f);
+            yield return Tap(kb.eKey);
+            yield return new WaitForSecondsRealtime(0.2f);
+            Assert.IsFalse(inspector.IsActive);
+            Assert.IsTrue(targeting.LaserOn, "laser survives inspect");
+        }
     }
 }
 #endif

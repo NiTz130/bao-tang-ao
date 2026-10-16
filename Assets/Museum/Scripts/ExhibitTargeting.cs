@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 namespace Museum
@@ -16,13 +17,21 @@ namespace Museum
         [SerializeField] Color idleColor = new Color(1f, 1f, 1f, 0.7f);
         [SerializeField] Color targetColor = new Color32(0xE8, 0xB0, 0x4A, 0xFF);
 
+        // Key 1 toggles the laser: long reach, a red line from the "hand" and a dot at the end point.
+        [SerializeField] InputAction laserToggle = new InputAction("Laser", InputActionType.Button, "<Keyboard>/1");
+        [SerializeField, Min(1f)] float laserDistance = 20f;
+        [SerializeField] LineRenderer laserLine; // optional
+        [SerializeField] Transform laserDot; // optional
+
         public NarrativeAnchor Current { get; private set; }
+        public bool LaserOn => laserOn;
 
         // Base intensity is stored once per light, so repeated hovers cannot drift it.
         readonly Dictionary<Light, float> baseIntensity = new Dictionary<Light, float>();
         readonly HashSet<Light> boosted = new HashSet<Light>();
         readonly List<Light> destroyed = new List<Light>();
         float blend; // 0 = idle, 1 = on target
+        bool laserOn;
 
         void OnEnable()
         {
@@ -30,7 +39,9 @@ namespace Museum
             {
                 Debug.LogError("ExhibitTargeting: cam and crosshair must be assigned.", this);
                 enabled = false;
+                return;
             }
+            laserToggle.Enable();
         }
 
         void OnDisable()
@@ -40,10 +51,13 @@ namespace Museum
             Current = null;
             blend = 0f;
             if (crosshair != null) crosshair.enabled = false;
+            laserToggle.Disable();
+            ShowLaser(false); // laserOn is kept: the inspector disables this component on every inspect
         }
 
         void Update()
         {
+            if (laserToggle.WasPressedThisFrame()) laserOn = !laserOn;
             Current = FindTarget();
 
             boosted.Clear();
@@ -73,12 +87,32 @@ namespace Museum
             crosshair.color = Color.Lerp(idleColor, targetColor, blend);
         }
 
-        NarrativeAnchor FindTarget()
+        // Runs after the camera has moved, so the line does not lag.
+        void LateUpdate()
         {
-            var ray = new Ray(cam.transform.position, cam.transform.forward);
-            return Physics.Raycast(ray, out var hit, maxDistance, Physics.DefaultRaycastLayers, QueryTriggerInteraction.Collide)
-                ? hit.collider.GetComponentInParent<NarrativeAnchor>()
-                : null;
+            bool show = laserOn && Cursor.lockState != CursorLockMode.None;
+            ShowLaser(show);
+            if (!show) return;
+            var t = cam.transform;
+            var end = Cast(out var hit) ? hit.point : t.position + t.forward * laserDistance;
+            if (laserLine != null)
+            {
+                laserLine.SetPosition(0, t.position + t.right * 0.15f - t.up * 0.2f + t.forward * 0.1f);
+                laserLine.SetPosition(1, end);
+            }
+            if (laserDot != null) laserDot.position = end;
         }
+
+        void ShowLaser(bool on)
+        {
+            if (laserLine != null) laserLine.enabled = on;
+            if (laserDot != null) laserDot.gameObject.SetActive(on);
+        }
+
+        bool Cast(out RaycastHit hit) =>
+            Physics.Raycast(new Ray(cam.transform.position, cam.transform.forward), out hit, laserOn ? laserDistance : maxDistance,
+                Physics.DefaultRaycastLayers, QueryTriggerInteraction.Collide);
+
+        NarrativeAnchor FindTarget() => Cast(out var hit) ? hit.collider.GetComponentInParent<NarrativeAnchor>() : null;
     }
 }

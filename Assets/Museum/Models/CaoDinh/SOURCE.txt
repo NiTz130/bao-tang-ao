@@ -1,0 +1,13 @@
+Title: Cao Đỉnh (高鼎) - đỉnh đồng Cao Đỉnh, Thế Tổ Miếu, Hoàng thành Huế
+Author: vudn54
+Licence: CC BY 4.0
+Credit: "Cao Đỉnh" by vudn54, CC BY 4.0, https://sketchfab.com/3d-models/cao-inh-a3357b6bbb384ea8bf185f3c2e1a9d30
+Scan check: photogrammetry (kết luận từ ảnh, không phải từ tag; Sketchfab không có tag nào). Mô tả: "CAO ĐỈNH (高鼎) 1835-1837, đồng, 2.603,6 kg ... Thế Tổ Miếu (Hoàng thành Huế)". Bằng chứng: texture màu 8192x8192 là ảnh chụp thật, có lốm đốm, ố xanh rỉ đồng, vệt chảy; mesh 50k đỉnh, không đều (hơn 1600 mảnh liên thông do đường nối, hơn 40k cạnh biên); mô hình còn dính nguyên một tấm nền trắng bị quét kèm dưới chân (đặc trưng quét thật); các ô hình nổi (rồng, mặt trời, thuyền, đại bác...), chữ 高鼎 và hoa văn trên chân là hình học thật trong lưới, không chỉ là texture. Không có normal map, không có vật liệu thủ công. Chất lượng: bản quét độ phân giải thấp (đã decimate sẵn, tên nguồn "CaoDinh_lite").
+Display scale: 1.60 m = chiều cao (Z). Rộng 1.02 x 1.04 m (X x Y). Gốc ở tâm đáy (giữa bounds X/Y, z = chân thấp nhất). Mặt chính (-Y) là mặt có chữ Hán 高鼎 nằm giữa hai chân.
+Faces: source 99887 -> exported 89806 triangles (không decimate, chỉ gỡ nền). Mặt lật: 0/89806 (0%).
+Textures:
+  CaoDinh_BaseColor.jpg (4096x4096, sRGB) - ảnh gốc 8192 thu về 4096, JPEG q90
+Material: đồng - dùng metallic ~0.6, smoothness ~0.4 trong Unity (không có map metallic nguồn). Không có normal map nguồn.
+Vertex colors: none.
+Đã gỡ: tấm nền trắng bị quét kèm (khoảng 10.000 mặt) và các mảnh dính vào nó. Còn sót vài miếng nền trắng mỏng, bán kính khoảng 0.13 m, nằm ngay dưới ba bàn chân; giữ lại để khỏi cắt vào chân. Không gỡ mảnh liên thông nhỏ nào khác vì chúng là mảng vỏ tách theo đường nối.
+Ba mesh nguồn (Object_2, Object_3 và Object_4) được gộp thành một object. Object_4 (639 mặt, vật liệu phẳng GeneratedMat1 xám) nằm bên trong thân đỉnh, có vẻ là mảng vá lỗ do công cụ dọn mesh; đã gán chung vật liệu texture.

@@ -1,0 +1,15 @@
+Title: The Lord SIVA _ XIII-XIVth century
+Author: micmac (tên hiển thị trên Sketchfab: MicMac)
+Licence: CC BY 4.0
+Credit: "The Lord SIVA _ XIII-XIVth century" by micmac, CC BY 4.0, https://sketchfab.com/3d-models/the-lord-siva---xiii-xivth-century-53511798f33a4ca8a2ef4cd9c5fbbb28
+Scan check: photogrammetry. Tag Sketchfab: micmac, Cultural_Heritage, photogrammetry, sculpture. Bằng chứng khác: mesh 620k tam giác không đều, có đáy quét dính (tấm nền nghiêng ~14 độ), mảnh nhiễu ở mép; tác giả MicMac là bộ phần mềm photogrammetry của IGN.
+Subject: Tượng Shiva, Champa (mô tả Sketchfab: "This statue belongs to former empire called Champa"), thế kỷ 13-14. Xuất xứ khớp phòng Điêu khắc Chăm.
+Display scale: cao 0.90 m (trục Z). Bounds 0.521 x 0.245 x 0.900 m (X x Y x Z). Mặt chính hướng -Y, gốc ở tâm đáy.
+Faces: source 620549 -> exported 150000 triangles (Decimate Collapse; normal map baked từ mesh 535600 tam giác sau khi gỡ nền). Mặt lật: 6/150000 (0.004%).
+Textures:
+  LordSivaMicmac_BaseColor.jpg (4096x4096, sRGB) - bake từ vertex color của nguồn, JPEG q90
+  LordSivaMicmac_Normal.png (4096x4096, tangent space, Non-Color) - baked
+Material: sa thạch - dùng metallic 0, smoothness ~0.2 trong Unity. Màu nguồn khá tối (xám than); nếu thấy tối quá, tăng nhẹ tint/exposure trong Unity, không sửa texture.
+Vertex colors: nguồn không có UV và không có texture ảnh, chỉ có vertex color. Đã bake thành BaseColor; FBX xuất ra không còn vertex color. UV tạo mới bằng Smart UV Project.
+Đã gỡ: tấm nền quét dính dưới chân tượng (cắt theo mặt phẳng nền, ~82k tam giác gồm 36 mảnh rời nhỏ). Không cắt đế thật của tượng. Tượng được xoay phẳng theo mặt nền (~14 độ quanh X).
+Sáu mesh nguồn (Object_2..Object_7) gộp thành một object, một material.

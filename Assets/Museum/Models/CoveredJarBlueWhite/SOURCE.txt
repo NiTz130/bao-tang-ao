@@ -1,0 +1,14 @@
+Title: Hũ có nắp men lam (1998.285 Covered Jar), Việt Nam, thế kỷ 16-17
+Author: The Cleveland Museum of Art (tài khoản Sketchfab: clevelandart)
+Licence: CC0 1.0 Public Domain (miễn ghi công; vẫn ghi để minh bạch)
+Credit: "Cleveland Museum of Art, CC0" - "1998.285 Covered Jar", Bequest of Gordon K. Mott, số hiệu 1998.285, https://sketchfab.com/3d-models/38e5877fc22d4a81b28b0388b26fe4e4 (UID 38e5877fc22d4a81b28b0388b26fe4e4; bản có nắp, không dùng bản .a và .b)
+Origin: VIỆT NAM. Mô tả Sketchfab: "Covered Jar, 1500s-1600s. Vietnam. Stoneware with blue and white decoration; diameter 21.8 cm; with cover 23 cm." Phù hợp phòng Gốm Việt Nam. (Nắp màu nâu cam trông khác thân; mô tả không nói nắp có nguyên bản hay không. Xem như một hiện vật theo bảo tàng.)
+Scan check: photogrammetry / quét thật (kết luận từ ảnh và lưới, không chỉ từ tag). Tag Sketchfab: ceramic, cleveland_museum_of_art, indian-and-southeast-asian-art, glazed-stoneware, southeast-asian (không có tag scan). Bằng chứng: texture thân 8192x8192, nắp 4096x4096 là ảnh chụp thật (men ngà ám vàng, vết ố, nứt men, mài mòn quanh chân đế, nét vẽ lam không đều); lưới 94k tam giác không đều, thân và nắp tách thành hai mảng UV riêng; có bản normal map; bề mặt men có gợn thật. Đo kích thước khớp mô tả: đường kính 0,222 m so với 21,8 cm, cao 0,230 m so với 23 cm có nắp. Không phải mô hình dựng tay.
+Display scale: 0.23 m = chiều cao thật (Z), gồm nắp. Bounds: X 0.2222, Y 0.2204, Z 0.2300 m. Gốc ở tâm đáy (0,0,0), trục đứng +Z. Mặt chính (chim phượng giữa thân) quay về -Y.
+Faces: source 94021 -> exported 93989 triangles (không decimate). Mặt lật: 0/93989 (0%).
+Textures (2 vật liệu, giữ như nguồn):
+  Thân: CoveredJarBlueWhite_BaseColor.jpg (4096x4096, sRGB, JPEG q90; gốc 8192 thu về 4096), CoveredJarBlueWhite_Normal.png (4096x4096, tangent, Non-Color; gốc 8192 thu về 4096)
+  Nắp:  CoveredJarBlueWhite_BaseColor_2.jpg (4096x4096, sRGB, JPEG q90), CoveredJarBlueWhite_Normal_2.png (4096x4096, tangent, Non-Color)
+Material: men gốm - trong Unity dùng metallic 0, smoothness ~0.6 cho thân (men bóng nhẹ), ~0.35 cho nắp (mộc, ít bóng). Nguồn có bản specularGlossiness nhưng không xuất (không map sang metallic/smoothness của URP cho đúng được); đã gỡ khỏi FBX.
+Vertex colors: none (nguồn không có kênh Color).
+Đã gỡ: một đĩa phẳng 32 mặt (vật liệu "Fill_Mats", bán kính 0,034 m) nằm kín bên trong miệng hũ dưới nắp; đó là mảng bịt lỗ do công cụ dọn mesh, không thuộc hiện vật. Không có nền hay bệ quét dính kèm.

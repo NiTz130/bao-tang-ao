@@ -1,0 +1,14 @@
+Title: Trống đồng (Tam Chúc bronze drum)
+Author: atlantictruong19 (tên hiển thị trên Sketchfab: Atlantic Truong, kênh "Vietnam 3D")
+Licence: CC BY 4.0
+Credit: "Trống đồng" by atlantictruong19, CC BY 4.0, https://sketchfab.com/3d-models/trong-ong-2d969ba1ae734ab28019ab0e48244188
+Scan check: photogrammetry (kết luận từ ảnh, không phải từ tag). Tag Sketchfab chỉ có: bronze, drums, 3d. Mô tả: "Trống đồng Tam Chúc - Văn hóa Đông Sơn ... phát hiện tại lòng hồ Tam Chúc 1978". Bằng chứng: texture màu 8192x8192 chụp thật, có rỉ đồng, vết bẩn, lỗ thủng, mép đáy rách; mesh không đều, 205k tam giác.
+Display scale: 0.70 m = đường kính mặt trống (X). Cao 0.519 m. Mặt trống hướng +Z, gốc ở tâm đáy. Trống không có mặt chính; mặt "trước" (-Y) là tùy ý.
+Faces: source 205338 -> exported 150000 triangles (Decimate Collapse; normal map baked từ mesh đầy đủ). Mặt lật: 86/150000 (0.06%).
+Textures:
+  TamChucDrum_BaseColor.jpg (4096x4096, sRGB) - ảnh gốc 8192 thu về 4096, JPEG q90
+  TamChucDrum_Normal.png (4096x4096, tangent space, Non-Color) - baked
+Material: đồng - dùng metallic ~0.6, smoothness ~0.4 trong Unity (không có map metallic nguồn).
+Vertex colors: none.
+Đã gỡ: không gỡ phần nào (không có nền đất hay bệ). Mesh có ~1550 mảnh liên thông do đường nối, không phải mảnh rời; giữ nguyên.
+Hai mesh nguồn (Object_4, Object_5) được gộp thành một object, một material.

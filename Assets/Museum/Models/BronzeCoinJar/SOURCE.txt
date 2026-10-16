@@ -1,0 +1,14 @@
+Title: Hũ tiền đồng (Bronze Coin Jar)
+Author: atlantictruong19 (tên hiển thị trên Sketchfab: Atlantic Truong, kênh "Vietnam 3D")
+Licence: CC BY 4.0
+Credit: "Hũ tiền đồng" by atlantictruong19, CC BY 4.0, https://sketchfab.com/3d-models/hu-tien-ong-c57e1b8957bd44fd904ec3c129bb3922
+Scan check: photogrammetry (kết luận từ ảnh và lưới, không phải từ tag). Tag Sketchfab: ancient, bronze, money, historical, artifact, culture, antique, jar, prosperity, vietnamese, shui, feng (không có tag photogrammetry/scan). Bằng chứng: texture màu 8192x8192 là ảnh chụp thật (màu đồng sẫm không đều, vết bẩn, rỉ); lưới 2,80M tam giác không đều, chia 26 object glTF theo khối, có kênh vertex color ghi lại màu quét (tương quan 0,93 với texture); phần miệng hũ rách, lộ cụm đồng tiền dính cứng ở miệng; đáy phẳng có nắp lưới đóng.
+Origin: mô tả tác giả (tiếng Việt) nói hũ làm thủ công bằng đồng, dùng cất tiền xu cổ, phổ biến ở nhà dân, đền chùa, phủ đường "thời phong kiến". Tag "vietnamese". Không ghi niên đại cụ thể, không ghi nơi lưu giữ. Hoa văn rồng và mây nổi trên thân. Xuất xứ Việt Nam theo mô tả; niên đại không rõ.
+Display scale: 0.40 m = chiều cao (Z). Bounds: X 0.261, Y 0.258, Z 0.400 m. Mặt chính (rồng) quay về -Y, trục đứng +Z, gốc ở tâm đáy (0,0,0). Bản quét nghiêng 2,9 độ so với mặt đáy phẳng; đã dựng thẳng.
+Faces: source 2802032 -> exported 100000 triangles (hàn đỉnh 1e-5, Decimate Collapse; normal map baked từ mesh đầy đủ, cage 0.005, ray 0.02). Mặt lật: 65/100000 (0.065%).
+Textures:
+  BronzeCoinJar_BaseColor.jpg (4096x4096, sRGB) - ảnh gốc 8192 thu về 4096, JPEG q90, lưu một lần
+  BronzeCoinJar_Normal.png (4096x4096, tangent space, Non-Color) - baked
+Material: đồng - dùng metallic ~0.6, smoothness ~0.4 trong Unity (không có map metallic nguồn).
+Vertex colors: nguồn có kênh Color (tối đa 0,90; alpha 0) nhân vào base color trong glTF. Kênh này gần như trùng texture (tương quan 0,93); nhân vào sẽ tối đi rõ (sRGB trung bình 0,56 -> 0,33). Đã bỏ, FBX không có vertex color; texture đã đủ màu.
+Đã gỡ: 68 mặt thuộc 6 mảnh rời nhỏ (dưới 0,01% tổng). Không có nền hay bệ quét dính. Giữ cụm đồng tiền ở miệng hũ (là phần của hiện vật).

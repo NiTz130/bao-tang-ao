@@ -1,0 +1,15 @@
+Title: Vietnamese Lantern (Scaniverse) (đèn lồng Hội An)
+Author: db4 (tên hiển thị trên Sketchfab: JFN)
+Licence: CC BY 4.0
+Credit: "Vietnamese Lantern (Scaniverse)" by db4, CC BY 4.0, https://sketchfab.com/3d-models/vietnamese-lantern-scaniverse-90517b64386c4022a826602814b342e0
+Scan check: bản quét thật (Scaniverse, LiDAR/photogrammetry trên điện thoại). Không phải dựng tay. Tag Sketchfab: lantern, lidar, cultural, Oss, Vietnam, scaniverse, arkitekjfn, opensourcesarawak. Mô tả: "Vietnamese Lantern (aka Hoi An Lanterns)". Bằng chứng khác: texture 8192x4096 là ảnh chụp thật (vải xanh, hoa vẽ, vết bẩn); lưới 55k tam giác không đều, 120 mảnh rời kiểu chia UV của bản quét; nguồn có 8 lớp UV (đã giữ lớp đầu).
+Display scale: cao 0.55 m (trục Z), gồm quai dây ở đỉnh và tua ở đáy. Bounds: X 0.268, Y 0.271, Z 0.550 m.
+QUY ƯỚC GỐC: gốc (0,0,0) ở TÂM ĐỈNH (điểm treo = đỉnh quai dây). Mesh nằm ở z 0 đến -0.55 m (Blender, +Z đứng), đèn treo xuống dưới. Trong Unity đặt gốc tại điểm dây treo, không cần offset. Đèn tròn xoay quanh trục đứng nên hướng mặt không quan trọng.
+Faces: source 55447 -> exported 55447 triangles (giữ nguyên, chỉ hàn đỉnh 1e-5: 30227 -> 27731 đỉnh). Mặt lật: 2/55447 (0.004%).
+MỘT LỚP: mặt thô một lớp. Chỉ có bề mặt ngoài của vải (tia bắn từ trục ra gặp đúng 1 mặt), không có thành trong. Cạnh biên 7, cạnh không đa tạp 1 (lưới gần kín). Từ bên trong, qua miệng đèn, mặt vải bị cull nếu vật liệu một mặt. Unity: dùng vật liệu HAI MẶT (Cull Off) nếu cần thấy mặt trong.
+Textures:
+  HoiAnLantern_BaseColor.jpg (4096x2048, sRGB) - ảnh gốc 8192x4096 thu về 4096x2048, JPEG q90
+Alpha: không dùng. Nguồn không có alpha thật (vật liệu gốc là Emission/Transparent chỉ để hiển thị Sketchfab). Không cần PNG alpha.
+Material: vải, tre - dùng metallic 0, smoothness ~0.2 trong Unity (không có map metallic/normal nguồn). Texture đã chứa sẵn ánh sáng chụp; nếu thấy phẳng, có thể thêm Emission nhẹ khi đèn "sáng".
+Vertex colors: nguồn không có.
+Đã gỡ: không gỡ phần nào. Nguồn chỉ có MỘT đèn, không có nền hay giá đỡ. Giữ quai dây ở đỉnh và tua ở đáy vì là phần của đèn. Gộp từ cây object glTF (Sketchfab_model/RootNode/mesh) thành một object, một material.
