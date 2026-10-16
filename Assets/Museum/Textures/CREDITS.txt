@@ -3,3 +3,7 @@ Textures from Poly Haven (https://polyhaven.com). Licence: CC0 (public domain).
 floor_tiles_06 - Floor Tiles 06 - https://polyhaven.com/a/floor_tiles_06 - Author: Rob Tuytel (all) - CC0
 beige_wall_001 - Beige Wall 001 - https://polyhaven.com/a/beige_wall_001 - Authors: Dimitrios Savva (photography), Rico Cilliers (processing) - CC0
 white_stucco - White Stucco - https://polyhaven.com/a/white_stucco - Author: Amal Kumar (all) - CC0
+marble_01 - Marble 01 - https://polyhaven.com/a/marble_01 - Author: Rob Tuytel (all) - CC0
+red_brick_03 - Red Brick 03 - https://polyhaven.com/a/red_brick_03 - Author: Rob Tuytel (all) - CC0
+sandstone_blocks_04 - Sandstone Blocks 04 - https://polyhaven.com/a/sandstone_blocks_04 - Author: Rob Tuytel (all) - CC0
+dark_wood - Dark Wood - https://polyhaven.com/a/dark_wood - Authors: Dimitrios Savva (photography), Rico Cilliers (tiling), Dario Barresi (baking) - CC0
