@@ -1,0 +1,20 @@
+exhibit,author,licence,scan_status,tris_original,tris_shipped_source,tris_actual,verts_actual,tex_original,tex_actual_max,mesh_mb,tex_mb
+BayonRelief,Theo.Derory,CC BY 4.0,scan,999999,289998,289998,199712,8192,4096,10.77,33.48
+BottleVase,artsmia (Minneapolis Institute of Art),CC0,scan (photogrammetry tag),,64000,64000,33201,,2048,2.11,12.34
+BronzeCoinJar,atlantictruong19,CC BY 4.0,"scan (photogrammetry, concluded from images)",2802032,100000,100000,54867,8192,4096,2.81,20.02
+BuddhaHead,artsmia (Minneapolis Institute of Art),CC0,scan,,64000,64000,35921,,2048,2.56,37.76
+CaoDinh,vudn54,CC BY 4.0,"scan (photogrammetry, concluded from images)",99887,89806,89806,66141,8192,4096,3.27,1.76
+CeladonEwer,artsmia (Minneapolis Institute of Art),CC0,scan (photogrammetry tag),,53310,53310,29935,,2048,1.92,23.28
+ChamDeifiedKing,artsmia (Minneapolis Institute of Art),CC0,scan,,63369,63369,42660,,2048,2.46,35.24
+ChamShiva,michelon_e,CC BY 4.0,scan (photogrammetry tags),698012,150000,150000,135373,8192,2048,6.24,76.42
+CoveredJarBlueWhite,The Cleveland Museum of Art (clevelandart),CC0 1.0,"scan (photogrammetry, concluded from images)",94021,93989,93989,48288,8192,4096,3.11,25.72
+Devata,DarrenWilch,CC BY 4.0,scan (not confirmed by author metadata),,37872,37872,21754,,2048,1.25,27.56
+DongSonDrum,Aaannnn,CC BY 4.0,NOT A SCAN (hand-made artist model),,50816,50816,29315,,2048,1.41,47.49
+GuardianLion,artsmia (Minneapolis Institute of Art),CC0,scan,,64000,64000,35310,,2048,2.23,52.82
+HoiAnLantern,db4 (JFN),CC BY 4.0,scan (Scaniverse LiDAR/photogrammetry),55447,55447,55447,29988,8192,4096,1.73,1.39
+KhaiDinhStatue,eyesCloud3D,CC BY 4.0,scan (smartphone photogrammetry per author),,126982,126982,79607,,2048,3.93,22.94
+LordSivaMicmac,micmac (MicMac),CC BY 4.0,scan (photogrammetry tag),620549,150000,150000,119847,,4096,5.03,10.77
+NgheThaiHoa,atlantictruong19,CC BY 4.0,"scan (photogrammetry, concluded from images)",2956829,149999,149999,91751,8192,4096,4.71,19.26
+TamChucDrum,atlantictruong19,CC BY 4.0,"scan (photogrammetry, concluded from images)",205338,150000,150000,80486,8192,4096,5.38,6.85
+TuDucStele,vashar (data: CyArk),CC BY 4.0,scan (LiDAR + photogrammetry),1918731,300000,300000,343780,8192,4096,15.66,157.47
+TOTAL,,,,,2053588,2053588,1477936,,,76.58,612.57

@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "diagram_type": "lifecycle",
+  "meta": {
+    "title": "Luồng trải nghiệm và máy trạng thái xem gần",
+    "output": "02_luong_trang_thai.html",
+    "quality_profile": "showcase",
+    "legend": {
+      "mode": "all",
+      "entries": {
+        "start": {
+          "label": "Idle: đi lại"
+        },
+        "active": {
+          "label": "Trạng thái đang chạy"
+        },
+        "waiting": {
+          "label": "Panel mở rộng"
+        },
+        "decision": {
+          "visible": false
+        },
+        "success": {
+          "visible": false
+        },
+        "failure": {
+          "visible": false
+        },
+        "neutral": {
+          "visible": false
+        },
+        "external": {
+          "visible": false
+        }
+      }
+    }
+  },
+  "lanes": [
+    {
+      "id": "main",
+      "label": "Idle: đi lại và đọc panel (NarrativeDirector)"
+    },
+    {
+      "id": "inspect",
+      "label": "Xem gần (ExhibitInspector.Phase)"
+    }
+  ],
+  "states": [
+    {
+      "id": "walk",
+      "type": "start",
+      "label": "Idle",
+      "sublabel": "đi lại",
+      "lane": "main",
+      "col": 0,
+      "step": "01",
+      "tag": "WASD",
+      "width": 96
+    },
+    {
+      "id": "zone",
+      "type": "active",
+      "label": "Tóm tắt",
+      "sublabel": "panel trong vùng",
+      "lane": "main",
+      "col": 1,
+      "step": "02",
+      "tag": "≤ 3 m",
+      "width": 96
+    },
+    {
+      "id": "expanded",
+      "type": "waiting",
+      "label": "Mở rộng",
+      "sublabel": "story + nguồn",
+      "lane": "main",
+      "col": 2,
+      "step": "03",
+      "width": 96
+    },
+    {
+      "id": "entering",
+      "type": "active",
+      "label": "Entering",
+      "sublabel": "bay tới camera",
+      "lane": "inspect",
+      "col": 0,
+      "step": "04",
+      "tag": "0,45 s",
+      "width": 96
+    },
+    {
+      "id": "viewing",
+      "type": "active",
+      "label": "Viewing",
+      "sublabel": "xoay, thu phóng",
+      "lane": "inspect",
+      "col": 1,
+      "step": "05",
+      "width": 96
+    },
+    {
+      "id": "leaving",
+      "type": "active",
+      "label": "Leaving",
+      "sublabel": "về lại bệ",
+      "lane": "inspect",
+      "col": 2,
+      "step": "06",
+      "tag": "0,45 s",
+      "width": 96
+    }
+  ],
+  "transitions": [
+    {
+      "id": "enter-zone",
+      "from": "walk",
+      "to": "zone",
+      "label": "≤ 3 m",
+      "variant": "emphasis"
+    },
+    {
+      "id": "leave-zone",
+      "from": "zone",
+      "to": "walk",
+      "label": "ra vùng",
+      "variant": "dashed",
+      "route": "bottom-channel"
+    },
+    {
+      "id": "expand",
+      "from": "zone",
+      "to": "expanded",
+      "label": "E",
+      "route": "straight",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "collapse",
+      "from": "expanded",
+      "to": "zone",
+      "label": "E",
+      "variant": "dashed",
+      "route": "top-channel"
+    },
+    {
+      "id": "begin-inspect",
+      "from": "zone",
+      "to": "entering",
+      "label": "E",
+      "variant": "emphasis",
+      "fromSide": "bottom",
+      "toSide": "left"
+    },
+    {
+      "id": "arrived",
+      "from": "entering",
+      "to": "viewing"
+    },
+    {
+      "id": "stop-view",
+      "from": "viewing",
+      "to": "leaving",
+      "label": "E/Esc",
+      "variant": "security"
+    },
+    {
+      "id": "abort-enter",
+      "from": "entering",
+      "to": "leaving",
+      "label": "E/Esc",
+      "variant": "security",
+      "route": "bottom-channel"
+    },
+    {
+      "id": "restored",
+      "from": "leaving",
+      "to": "walk",
+      "label": "Restore",
+      "variant": "dashed",
+      "route": "bottom-channel"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "emerald",
+      "title": "Vùng và panel",
+      "items": [
+        "Vào vùng khi cách anchor ≤ 3 m; nhà bia Tự Đức ≤ 3,5 m",
+        "E trong vùng: chuyển giữa tóm tắt và mở rộng",
+        "Ra khỏi vùng hoặc đổi vùng: panel về dạng tóm tắt"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Xem gần",
+      "items": [
+        "E khi tia ngắm 4 m trúng hiện vật: Idle sang Entering",
+        "Viewing khóa FirstPersonController và tắt ExhibitTargeting",
+        "E hoặc Esc gọi Exit; khi đang Leaving thì bỏ qua"
+      ]
+    },
+    {
+      "dot": "slate",
+      "title": "Chuyển trạng thái",
+      "items": [
+        "Entering và Leaving mỗi pha chạy 0,45 s",
+        "Hết Leaving, Restore trả mô hình về đúng vị trí cũ",
+        "FirstPersonController cũng nhả chuột khi nhấn Esc"
+      ]
+    }
+  ]
+}

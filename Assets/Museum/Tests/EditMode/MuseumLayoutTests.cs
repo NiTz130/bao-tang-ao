@@ -204,6 +204,39 @@ namespace Museum.Tests
         }
 
         [Test]
+        public void BenchmarkPoints_AreInTheirZonesOnWalkableFloor()
+        {
+            Physics.SyncTransforms();
+            var vestibule = new Room { XMin = -3f, XMax = 3f, ZMin = -16f, ZMax = -8f };
+            // Point name -> zone box. null = rotunda.
+            var zone = new Dictionary<string, Room?>
+            {
+                { "Bench_Vestibule", vestibule }, { "Bench_Rotunda", null },
+                { "Bench_West", West }, { "Bench_North", North }, { "Bench_East", East },
+            };
+            var points = scene.GetRootGameObjects().Single(g => g.name == "Benchmark").GetComponentsInChildren<Transform>()
+                .Where(t => zone.ContainsKey(t.name)).ToArray();
+            Assert.AreEqual(zone.Count, points.Length);
+            foreach (var t in points)
+            {
+                var p = t.position;
+                var room = zone[t.name];
+                if (room == null) Assert.Less(new Vector2(p.x, p.z).magnitude, RotundaRadius, t.name + " at " + p);
+                else Assert.IsTrue(p.x >= room.Value.XMin && p.x <= room.Value.XMax && p.z >= room.Value.ZMin && p.z <= room.Value.ZMax,
+                    t.name + " is outside its zone, at " + p);
+
+                // Floor under the feet, and room for the capsule.
+                Assert.IsTrue(Physics.Raycast(p + Vector3.up * 1f, Vector3.down, out var hit, 2f,
+                    Physics.DefaultRaycastLayers, QueryTriggerInteraction.Ignore), t.name + ": no floor");
+                Assert.AreEqual(0f, hit.point.y, 0.05f, t.name + ": floor is not at y = 0");
+                Assert.AreEqual(0f, p.y, 0.05f, t.name + ": not at standing height");
+                var blockers = Physics.OverlapCapsule(p + Vector3.up * CapsuleBottom, p + Vector3.up * CapsuleTop, CapsuleRadius,
+                    Physics.DefaultRaycastLayers, QueryTriggerInteraction.Ignore).Where(c => !IsPlayer(c));
+                Assert.IsEmpty(blockers.Select(c => c.name).ToArray(), t.name + ": a collider overlaps the spot");
+            }
+        }
+
+        [Test]
         public void Player_StartsInVestibule()
         {
             var player = scene.GetRootGameObjects().SelectMany(g => g.GetComponentsInChildren<Transform>(true)).First(t => t.name == "Player").position;

@@ -1,0 +1,344 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Kiến trúc thành phần của bảo tàng ảo",
+    "output": "01_kien_truc_thanh_phan.html",
+    "quality_profile": "showcase",
+    "legend": {
+      "mode": "all",
+      "entries": {
+        "frontend": {
+          "label": "Giao diện (UI)"
+        },
+        "backend": {
+          "label": "Thành phần MonoBehaviour"
+        },
+        "database": {
+          "label": "Đối tượng và dữ liệu trong cảnh"
+        },
+        "cloud": {
+          "label": "Logic thuần (test EditMode)"
+        },
+        "security": {
+          "visible": false
+        },
+        "messagebus": {
+          "label": "Input System"
+        },
+        "external": {
+          "label": "Công cụ đo hiệu năng"
+        }
+      }
+    }
+  },
+  "components": [
+    {
+      "id": "logic",
+      "type": "cloud",
+      "label": "NarrativeAnchorLogic",
+      "sublabel": "vùng gần nhất, bật/tắt mở rộng",
+      "pos": [
+        40,
+        50
+      ],
+      "size": [
+        230,
+        70
+      ]
+    },
+    {
+      "id": "panel",
+      "type": "frontend",
+      "label": "ExhibitInfoPanel",
+      "sublabel": "tiêu đề, tóm tắt, câu chuyện",
+      "pos": [
+        40,
+        240
+      ],
+      "size": [
+        200,
+        70
+      ]
+    },
+    {
+      "id": "director",
+      "type": "backend",
+      "label": "NarrativeDirector",
+      "sublabel": "trung tâm điều phối (trên Player)",
+      "tag": "hub",
+      "pos": [
+        330,
+        235
+      ],
+      "size": [
+        230,
+        80
+      ]
+    },
+    {
+      "id": "targeting",
+      "type": "backend",
+      "label": "ExhibitTargeting",
+      "sublabel": "tia 4 m, tâm ngắm, laze 20 m (phím 1)",
+      "pos": [
+        660,
+        50
+      ],
+      "size": [
+        250,
+        70
+      ]
+    },
+    {
+      "id": "anchor",
+      "type": "database",
+      "label": "NarrativeAnchor",
+      "sublabel": "ExhibitInfo + đèn spot + bán kính",
+      "tag": "6 hiện vật",
+      "pos": [
+        660,
+        240
+      ],
+      "size": [
+        250,
+        70
+      ]
+    },
+    {
+      "id": "inspector",
+      "type": "backend",
+      "label": "ExhibitInspector",
+      "sublabel": "Idle, Entering, Viewing, Leaving",
+      "pos": [
+        660,
+        420
+      ],
+      "size": [
+        250,
+        70
+      ]
+    },
+    {
+      "id": "actions",
+      "type": "messagebus",
+      "label": "InputSystem_Actions",
+      "sublabel": "5 hành động của map Player",
+      "pos": [
+        40,
+        420
+      ],
+      "size": [
+        200,
+        230
+      ]
+    },
+    {
+      "id": "fpc",
+      "type": "backend",
+      "label": "FirstPersonController",
+      "sublabel": "đi, nhìn, Frozen",
+      "pos": [
+        330,
+        580
+      ],
+      "size": [
+        230,
+        70
+      ]
+    },
+    {
+      "id": "fx",
+      "type": "database",
+      "label": "InspectLight + InspectVolume",
+      "sublabel": "đèn và hậu kỳ khi xem gần",
+      "pos": [
+        660,
+        580
+      ],
+      "size": [
+        250,
+        70
+      ]
+    },
+    {
+      "id": "math",
+      "type": "cloud",
+      "label": "InspectMath",
+      "sublabel": "FitScale, Ease, Zoom, Bob",
+      "pos": [
+        1010,
+        580
+      ],
+      "size": [
+        230,
+        70
+      ]
+    },
+    {
+      "id": "perf",
+      "type": "external",
+      "label": "PerfRecorder",
+      "sublabel": "5 điểm Bench_*, PerfStats, CSV",
+      "pos": [
+        330,
+        740
+      ],
+      "size": [
+        230,
+        70
+      ]
+    },
+    {
+      "id": "fader",
+      "type": "frontend",
+      "label": "ScreenFader",
+      "sublabel": "mờ dần khi vào cảnh, độc lập",
+      "pos": [
+        1010,
+        740
+      ],
+      "size": [
+        230,
+        70
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "d-logic",
+      "from": "director",
+      "to": "logic",
+      "label": "Update",
+      "fromSide": "top",
+      "toSide": "right"
+    },
+    {
+      "id": "d-panel",
+      "from": "director",
+      "to": "panel",
+      "label": "Show / Hide"
+    },
+    {
+      "id": "d-anchor",
+      "from": "director",
+      "to": "anchor",
+      "label": "đọc Radius",
+      "variant": "dashed"
+    },
+    {
+      "id": "d-target",
+      "from": "director",
+      "to": "targeting",
+      "label": "đọc Current",
+      "variant": "dashed",
+      "fromSide": "top",
+      "toSide": "left"
+    },
+    {
+      "id": "d-inspect",
+      "from": "director",
+      "to": "inspector",
+      "label": "Enter / Exit",
+      "variant": "emphasis"
+    },
+    {
+      "id": "d-actions",
+      "from": "director",
+      "to": "actions",
+      "label": "Interact (E)",
+      "variant": "emphasis"
+    },
+    {
+      "id": "t-anchor",
+      "from": "targeting",
+      "to": "anchor",
+      "label": "raycast, tăng sáng đèn",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelDy": 24
+    },
+    {
+      "id": "i-target",
+      "from": "inspector",
+      "to": "targeting",
+      "label": "tắt / bật",
+      "fromSide": "right",
+      "toSide": "right",
+      "labelDy": 67
+    },
+    {
+      "id": "i-anchor",
+      "from": "inspector",
+      "to": "anchor",
+      "label": "nhấc mô hình con"
+    },
+    {
+      "id": "i-fpc",
+      "from": "inspector",
+      "to": "fpc",
+      "label": "Frozen"
+    },
+    {
+      "id": "i-fx",
+      "from": "inspector",
+      "to": "fx",
+      "label": "bật đèn, weight",
+      "labelDy": 24
+    },
+    {
+      "id": "i-math",
+      "from": "inspector",
+      "to": "math",
+      "label": "tính toán"
+    },
+    {
+      "id": "i-actions",
+      "from": "inspector",
+      "to": "actions",
+      "label": "Look, Attack",
+      "variant": "dashed"
+    },
+    {
+      "id": "f-actions",
+      "from": "fpc",
+      "to": "actions",
+      "label": "Move, Look",
+      "variant": "dashed"
+    },
+    {
+      "id": "p-fpc",
+      "from": "perf",
+      "to": "fpc",
+      "label": "dịch chuyển Player",
+      "variant": "dashed"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Trung tâm",
+      "items": [
+        "NarrativeDirector chỉ nối các thành phần, không chứa tính toán",
+        "Mỗi khung hình hỏi NarrativeAnchorLogic và ExhibitTargeting"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "Xem gần",
+      "items": [
+        "ExhibitInspector khóa FirstPersonController và tắt ExhibitTargeting",
+        "Phép tính nằm ở InspectMath nên test được không cần cảnh"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Đứng riêng",
+      "items": [
+        "ScreenFader không gọi và không bị gọi bởi thành phần nào",
+        "PerfRecorder chỉ dịch chuyển Player và ghi CSV",
+        "Input Actions gồm Move, Look, Sprint, Attack, Interact"
+      ]
+    }
+  ]
+}

@@ -143,5 +143,25 @@ namespace Museum.Tests
             foreach (var a in All<NarrativeAnchor>())
                 Assert.IsTrue(a.transform.Cast<Transform>().Any(c => c.GetComponentInChildren<Renderer>(true) != null), a.name + ": no model to inspect");
         }
+
+        [Test]
+        public void PerfRecorder_OnPlayer_HasFiveNamedBenchmarkPoints()
+        {
+            var rec = All<PerfRecorder>().Single();
+            Assert.IsNotNull(rec.GetComponent<CharacterController>(), "PerfRecorder must be on the Player");
+            Assert.AreSame(rec.transform, Ref(rec, "player"));
+            var pts = new SerializedObject(rec).FindProperty("benchmarkPoints");
+            var expected = new[] { "Bench_Vestibule", "Bench_Rotunda", "Bench_West", "Bench_North", "Bench_East" };
+            Assert.AreEqual(expected.Length, pts.arraySize);
+            for (int i = 0; i < expected.Length; i++)
+            {
+                var t = pts.GetArrayElementAtIndex(i).objectReferenceValue as Transform;
+                Assert.IsNotNull(t, "benchmark point " + i + " is null");
+                Assert.AreEqual(expected[i], t.name);
+            }
+            var root = scene.GetRootGameObjects().Single(g => g.name == "Benchmark");
+            Assert.IsFalse(root.isStatic, "Benchmark root must not be static");
+            Assert.IsEmpty(root.GetComponentsInChildren<NarrativeAnchor>(true), "Benchmark must not hold an anchor");
+        }
     }
 }
