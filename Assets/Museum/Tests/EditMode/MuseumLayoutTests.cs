@@ -10,7 +10,7 @@ using UnityEngine.SceneManagement;
 namespace Museum.Tests
 {
     // Checks the rotunda layout in the real museum scene. Read-only: the scene is never saved.
-    // Numbers come from Docs/plans/2026-10-16-rotunda-rebuild.md.
+    // Fixed dimensions keep the room and walking-space checks independent of scene changes.
     public class MuseumLayoutTests
     {
         const string ScenePath = "Assets/Museum/Scenes/Museum.unity";

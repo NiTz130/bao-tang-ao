@@ -7,6 +7,21 @@ namespace Museum.Tests
     {
         static float[] Range(int from, int to) => Enumerable.Range(from, to - from + 1).Select(i => (float)i).ToArray();
 
+        [Test] public void ScanLine_KnownOriginal_ShowsReduction()
+        {
+            Assert.AreEqual("Đang chỉ: NgheThaiHoa: 149.999 tam giác (gốc 2.956.829, giảm 94,9%)", PerfRecorder.ScanLine("NgheThaiHoa", 149999));
+        }
+
+        [Test] public void ScanLine_UnknownOriginal_SaysNoSource()
+        {
+            Assert.AreEqual("Đang chỉ: BottleVase: 64.000 tam giác (không có số gốc)", PerfRecorder.ScanLine("BottleVase", 64000));
+        }
+
+        [Test] public void ScanLine_NotReduced_ShowsZero()
+        {
+            StringAssert.EndsWith("giảm 0,0%)", PerfRecorder.ScanLine("HoiAnLantern", 55447));
+        }
+
         [Test] public void Compute_KnownSeries_ExactValues()
         {
             // 1..20 ms, given in reverse order to prove sorting.

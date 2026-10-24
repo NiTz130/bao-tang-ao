@@ -79,6 +79,14 @@ namespace Museum.Tests
             Assert.AreEqual(11, lines[1].Split(',').Length);
             Assert.Greater(int.Parse(lines[1].Split(',')[1]), 0, "at least one frame sampled");
             Assert.AreEqual(b.position, player.position);
+
+            var text = rec.OverlayText();
+            StringAssert.Contains("Kết quả [B]", text);
+            StringAssert.Contains(PerfRecorder.OptimizationLine, text);
+            Assert.AreEqual(88.2, System.Math.Round(100.0 * (PerfRecorder.ScanTrisBefore - PerfRecorder.ScanTrisAfter) / PerfRecorder.ScanTrisBefore, 1));
+            StringAssert.Contains("CSV: " + rec.LastCsvPath, text);
+            Assert.AreEqual("B", rec.LastLabel);
+            Assert.Greater(rec.LastSummary.SampleCount, 0);
         }
 
         [UnityTest]

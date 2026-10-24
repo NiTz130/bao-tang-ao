@@ -39,7 +39,7 @@ results*.xml
 /.serena/
 /BlenderWork/
 
-# Old exhibit models no longer used by the scene (about 220 MB)
+# Old exhibit models no longer used by the scene
 /Assets/Museum/Models/BayonRelief/
 /Assets/Museum/Models/BayonRelief.meta
 /Assets/Museum/Models/BuddhaHead/
